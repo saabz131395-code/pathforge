@@ -1,0 +1,1160 @@
+# Level-check questions — 6 per path: 2 basic, 2 intermediate, 2 advanced.
+#
+# Write the correct answer in `correct` and three believable wrong answers in `wrong`.
+# The order shown to learners is shuffled automatically (the same way every time).
+# `topic` is shown to learners who miss the question, as something to review.
+# `id` is permanent — never rename it.
+
+questions:
+
+- id: web_dev-basic-1
+  path: web_dev
+  tier: basic
+  topic: Semantic HTML
+  prompt: Which HTML element is the right choice for a page's main navigation links?
+  correct: <nav>
+  wrong:
+  - <div>
+  - <section>
+  - <span>
+  explanation: <nav> tells browsers, search engines and screen readers that this block is navigation. A <div> works visually but carries no meaning.
+
+- id: web_dev-basic-2
+  path: web_dev
+  tier: basic
+  topic: CSS box model
+  prompt: Which CSS property adds space inside an element, between its content and its border?
+  correct: padding
+  wrong:
+  - margin
+  - gap
+  - border-spacing
+  explanation: Padding is inside the border; margin is outside it. Mixing the two up is the most common early layout bug.
+
+- id: web_dev-intermediate-1
+  path: web_dev
+  tier: intermediate
+  topic: Responsive layout
+  prompt: You want three cards in a row that wrap onto new lines on small screens. Which approach fits best?
+  correct: 'display: flex with flex-wrap: wrap (or a CSS grid)'
+  wrong:
+  - 'position: absolute on every card'
+  - 'float: left with fixed heights'
+  - An HTML <table>
+  explanation: Flexbox with wrapping (or grid with auto-fit) lets cards reflow naturally at any screen width, with no fixed positions.
+
+- id: web_dev-intermediate-2
+  path: web_dev
+  tier: intermediate
+  topic: DOM
+  prompt: What does document.querySelector('.btn') return?
+  correct: The first element with the class "btn", or null if there is none
+  wrong:
+  - Every element with the class "btn"
+  - A list of class names
+  - The CSS rule for .btn
+  explanation: querySelector returns only the first match. Use querySelectorAll when you need every match.
+
+- id: web_dev-advanced-1
+  path: web_dev
+  tier: advanced
+  topic: JavaScript event loop
+  prompt: What is printed? console.log(1); setTimeout(() => console.log(2), 0); Promise.resolve().then(() => console.log(3)); console.log(4);
+  correct: 1 4 3 2
+  wrong:
+  - 1 2 3 4
+  - 1 4 2 3
+  - 1 3 4 2
+  explanation: Synchronous code runs first (1, 4). Promise callbacks are microtasks and run before timer callbacks, so 3 comes before 2.
+
+- id: web_dev-advanced-2
+  path: web_dev
+  tier: advanced
+  topic: HTTP and CORS
+  prompt: A fetch() call from your site to an API on another domain fails with a CORS error. Where does the fix usually belong?
+  correct: On the API server, which must send the right Access-Control-Allow-Origin header
+  wrong:
+  - In the visitor's browser settings
+  - By switching from fetch() to XMLHttpRequest
+  - By marking the function async
+  explanation: CORS is enforced by the browser but controlled by the server. The server has to say which origins may read its responses.
+
+- id: ui_ux-basic-1
+  path: ui_ux
+  tier: basic
+  topic: User research
+  prompt: In UX design, what is a "persona"?
+  correct: A research-based profile of a typical user and their goals
+  wrong:
+  - A logo style
+  - The app's colour palette
+  - A developer role on the team
+  explanation: Personas keep design decisions focused on real user needs instead of personal taste.
+
+- id: ui_ux-basic-2
+  path: ui_ux
+  tier: basic
+  topic: Wireframing
+  prompt: What is the main purpose of a wireframe?
+  correct: To plan layout and structure before adding visual detail
+  wrong:
+  - To deliver the final pixel-perfect design
+  - To write the app's code
+  - To test server speed
+  explanation: Wireframes are cheap to change, so structure problems get fixed before time is spent on colours and polish.
+
+- id: ui_ux-intermediate-1
+  path: ui_ux
+  tier: intermediate
+  topic: Usability heuristics
+  prompt: Nielsen's heuristic "visibility of system status" means…
+  correct: The interface should always show what is happening, e.g. a loading indicator after a tap
+  wrong:
+  - Every feature must appear on the home screen
+  - The phone's status bar must stay visible
+  - Users should be able to see the source code
+  explanation: When people get no feedback they tap again, give up, or assume the app is broken.
+
+- id: ui_ux-intermediate-2
+  path: ui_ux
+  tier: intermediate
+  topic: Accessibility
+  prompt: What minimum contrast ratio does WCAG level AA require for normal body text?
+  correct: 4.5:1
+  wrong:
+  - '2:1'
+  - '3:1'
+  - '7:1'
+  explanation: 4.5:1 is the AA minimum for body text (3:1 for large text). 7:1 is the stricter AAA level.
+
+- id: ui_ux-advanced-1
+  path: ui_ux
+  tier: advanced
+  topic: Design systems
+  prompt: In a design system, what are "design tokens"?
+  correct: Named values (colours, spacing, type sizes) shared by design and code
+  wrong:
+  - Paid licences for fonts
+  - Login tokens for the design tool
+  - Icons stored in a sprite sheet
+  explanation: Tokens like color-primary or space-4 keep Figma and the codebase in sync, so one change updates everywhere.
+
+- id: ui_ux-advanced-2
+  path: ui_ux
+  tier: advanced
+  topic: Usability testing
+  prompt: In a usability test, 4 out of 5 users fail at the same step. What is the best next move?
+  correct: Redesign that step and test it again
+  wrong:
+  - Ship it, because one user succeeded
+  - Add a tooltip and ship without retesting
+  - Survey 100 more users with the same design
+  explanation: Five users are enough to reveal major problems. Fix the step and test again, rather than collecting more evidence of the same failure.
+
+- id: python_data-basic-1
+  path: python_data
+  tier: basic
+  topic: Python basics
+  prompt: What does len([3, 5, 7]) return?
+  correct: '3'
+  wrong:
+  - '7'
+  - '15'
+  - '[3, 5, 7]'
+  explanation: len() counts items, so it returns 3. sum() would return 15.
+
+- id: python_data-basic-2
+  path: python_data
+  tier: basic
+  topic: Data types
+  prompt: 'Which Python type stores key–value pairs such as {"name": "Ali"}?'
+  correct: dict
+  wrong:
+  - list
+  - tuple
+  - set
+  explanation: Dictionaries map keys to values and are used everywhere in Python, including JSON data.
+
+- id: python_data-intermediate-1
+  path: python_data
+  tier: intermediate
+  topic: Comprehensions
+  prompt: What does [x * 2 for x in range(3)] produce?
+  correct: '[0, 2, 4]'
+  wrong:
+  - '[2, 4, 6]'
+  - '[0, 1, 2]'
+  - '6'
+  explanation: range(3) gives 0, 1 and 2, and each is doubled.
+
+- id: python_data-intermediate-2
+  path: python_data
+  tier: intermediate
+  topic: pandas
+  prompt: In pandas, what does df.dropna() do by default?
+  correct: Returns the rows that have no missing values
+  wrong:
+  - Drops columns named "na"
+  - Fills missing values with 0
+  - Deletes the CSV file
+  explanation: dropna() removes rows containing NaN and returns a new DataFrame. Use fillna() to replace missing values instead.
+
+- id: python_data-advanced-1
+  path: python_data
+  tier: advanced
+  topic: Python gotchas
+  prompt: 'Why is def add(item, items=[]): a well-known Python bug?'
+  correct: The default list is created once and shared between every call
+  wrong:
+  - Lists cannot be function parameters
+  - It is a syntax error
+  - items silently becomes a tuple
+  explanation: Default values are evaluated once, when the function is defined. Use items=None and create a new list inside the function.
+
+- id: python_data-advanced-2
+  path: python_data
+  tier: advanced
+  topic: Performance
+  prompt: A pandas script on 5 million rows is slow because it loops with for i, row in df.iterrows(). What is usually the best fix?
+  correct: Replace the loop with a vectorised column operation
+  wrong:
+  - Add more print statements
+  - Convert every value to a string first
+  - Run the script twice
+  explanation: Vectorised operations (df["a"] * df["b"]) run in optimised C code and are often 100× faster than row-by-row Python loops.
+
+- id: data_analysis-basic-1
+  path: data_analysis
+  tier: basic
+  topic: Spreadsheets
+  prompt: In a spreadsheet, what does =AVERAGE(B2:B10) calculate?
+  correct: The mean of the values in B2 to B10
+  wrong:
+  - The total of B2 to B10
+  - How many cells are filled
+  - The largest value
+  explanation: AVERAGE adds the values and divides by how many there are. SUM, COUNT and MAX do the other jobs.
+
+- id: data_analysis-basic-2
+  path: data_analysis
+  tier: basic
+  topic: SQL basics
+  prompt: Which SQL keyword filters rows?
+  correct: WHERE
+  wrong:
+  - ORDER BY
+  - SELECT
+  - LIMIT
+  explanation: WHERE keeps only the rows that match a condition. ORDER BY sorts, and LIMIT caps how many rows come back.
+
+- id: data_analysis-intermediate-1
+  path: data_analysis
+  tier: intermediate
+  topic: SQL joins
+  prompt: What does customers LEFT JOIN orders return?
+  correct: Every customer, with order details where they exist
+  wrong:
+  - Only customers who placed orders
+  - Only the orders table
+  - Every combination of customers and orders
+  explanation: A LEFT JOIN keeps all rows from the left table. Customers without orders appear with NULLs in the order columns.
+
+- id: data_analysis-intermediate-2
+  path: data_analysis
+  tier: intermediate
+  topic: Statistics
+  prompt: Most salaries in a team are 40–60k, but the CEO earns 2 million. Which number best describes a typical salary?
+  correct: The median
+  wrong:
+  - The mean
+  - The maximum
+  - The sum
+  explanation: One extreme value pulls the mean up. The median (the middle value) is not affected by outliers.
+
+- id: data_analysis-advanced-1
+  path: data_analysis
+  tier: advanced
+  topic: SQL aggregation
+  prompt: What is the difference between WHERE and HAVING?
+  correct: WHERE filters rows before grouping, and HAVING filters groups after aggregation
+  wrong:
+  - There is no difference
+  - HAVING is just a faster WHERE
+  - WHERE only works with numbers
+  explanation: Use HAVING for conditions on aggregates, e.g. HAVING COUNT(*) > 5.
+
+- id: data_analysis-advanced-2
+  path: data_analysis
+  tier: advanced
+  topic: Analytical thinking
+  prompt: Ice-cream sales and drowning incidents rise together. What is the most reasonable conclusion?
+  correct: A third factor, hot weather, probably drives both, because correlation is not causation
+  wrong:
+  - Ice cream causes drowning
+  - The data must be wrong
+  - Drowning makes people buy ice cream
+  explanation: Before claiming cause and effect, always look for a hidden variable that explains both trends.
+
+- id: digital_marketing-basic-1
+  path: digital_marketing
+  tier: basic
+  topic: Marketing basics
+  prompt: What does SEO stand for?
+  correct: Search Engine Optimization
+  wrong:
+  - Social Engagement Online
+  - Sales Email Outreach
+  - Site Error Overview
+  explanation: SEO is the work of helping pages rank in search results without paying for ads.
+
+- id: digital_marketing-basic-2
+  path: digital_marketing
+  tier: basic
+  topic: Audience
+  prompt: What is a "target audience"?
+  correct: The specific group of people a campaign is meant to reach
+  wrong:
+  - Everyone on the internet
+  - Your competitors
+  - The advertising budget
+  explanation: Marketing to "everyone" usually reaches no one. A clear audience shapes the message, the channel and the timing.
+
+- id: digital_marketing-intermediate-1
+  path: digital_marketing
+  tier: intermediate
+  topic: Metrics
+  prompt: How is click-through rate (CTR) calculated?
+  correct: Clicks ÷ impressions
+  wrong:
+  - Sales ÷ visitors
+  - Cost ÷ clicks
+  - Followers ÷ posts
+  explanation: CTR shows how often people who saw something clicked on it. Cost ÷ clicks is CPC.
+
+- id: digital_marketing-intermediate-2
+  path: digital_marketing
+  tier: intermediate
+  topic: Experimentation
+  prompt: Two subject lines are sent to random halves of an email list to see which gets more opens. What is this called?
+  correct: An A/B test
+  wrong:
+  - Retargeting
+  - An SEO audit
+  - An influencer campaign
+  explanation: A/B tests change one thing and compare results, so you learn from data instead of guessing.
+
+- id: digital_marketing-advanced-1
+  path: digital_marketing
+  tier: advanced
+  topic: ROI
+  prompt: You spent 10,000 PKR on ads, and they brought in 40,000 PKR of revenue. What is the ROAS?
+  correct: 4 (that is, 400%)
+  wrong:
+  - '0.25'
+  - 30,000
+  - '10'
+  explanation: ROAS = revenue ÷ ad spend = 40,000 ÷ 10,000 = 4. Profit after costs is a separate calculation.
+
+- id: digital_marketing-advanced-2
+  path: digital_marketing
+  tier: advanced
+  topic: Attribution
+  prompt: A sale is credited only to the last ad clicked before the purchase. Which attribution model is this?
+  correct: Last-click
+  wrong:
+  - First-click
+  - Linear
+  - Time-decay
+  explanation: Last-click is simple but ignores earlier touchpoints that built awareness. That is why teams compare models.
+
+- id: content_video-basic-1
+  path: content_video
+  tier: basic
+  topic: Storytelling
+  prompt: What is a "hook" in a short video?
+  correct: The first few seconds, designed to make people keep watching
+  wrong:
+  - The background music
+  - The end screen
+  - The thumbnail file format
+  explanation: Viewers decide within seconds. A strong hook states the payoff or raises a question straight away.
+
+- id: content_video-basic-2
+  path: content_video
+  tier: basic
+  topic: Accessibility
+  prompt: Why add captions to a video?
+  correct: Many people watch without sound, and captions make the video accessible
+  wrong:
+  - Only for decoration
+  - To make the file bigger
+  - Every platform requires them
+  explanation: Captions help deaf viewers, people in quiet places and non-native speakers, and they usually improve watch time.
+
+- id: content_video-intermediate-1
+  path: content_video
+  tier: intermediate
+  topic: Editing
+  prompt: In editing, what is a "J-cut"?
+  correct: The next clip's audio starts before its video appears
+  wrong:
+  - The video fades to black
+  - The clip plays in reverse
+  - Two clips play side by side
+  explanation: J-cuts (and L-cuts) make transitions feel smooth and natural, especially in interviews.
+
+- id: content_video-intermediate-2
+  path: content_video
+  tier: intermediate
+  topic: Composition
+  prompt: What is the "rule of thirds" about?
+  correct: Placing key subjects along imaginary lines that divide the frame into thirds
+  wrong:
+  - Keeping videos under three minutes
+  - Filming with three cameras
+  - Mixing audio in three layers
+  explanation: Off-centre subjects usually feel more dynamic and leave room for text or movement.
+
+- id: content_video-advanced-1
+  path: content_video
+  tier: advanced
+  topic: Audio
+  prompt: Your audio peaks hit 0 dB and sound crackly. What happened?
+  correct: 'Clipping: the audio was too loud and distorted'
+  wrong:
+  - It was mastered well
+  - The video bitrate is too low
+  - The resolution is wrong
+  explanation: Keep dialogue peaks around -6 dB. Clipped audio usually can't be repaired afterwards.
+
+- id: content_video-advanced-2
+  path: content_video
+  tier: advanced
+  topic: Analytics
+  prompt: The retention graph shows a big drop at 0:45. What is the best first step?
+  correct: Rewatch 0:45, look for a slow, off-topic or confusing moment, and tighten it
+  wrong:
+  - Ignore it
+  - Make the video longer
+  - Change only the thumbnail
+  explanation: Retention drops point to exact moments. Fix the content there, then compare the next video.
+
+- id: software_testing-basic-1
+  path: software_testing
+  tier: basic
+  topic: Test design
+  prompt: What is a test case?
+  correct: Steps, input data and an expected result that check one behaviour
+  wrong:
+  - A reported bug
+  - The program's source code
+  - A bag for a test laptop
+  explanation: Good test cases are specific enough that anyone can run them and get the same verdict.
+
+- id: software_testing-basic-2
+  path: software_testing
+  tier: basic
+  topic: Bug reporting
+  prompt: What matters most in a bug report so a developer can fix the bug?
+  correct: Clear steps to reproduce it, plus the expected and actual results
+  wrong:
+  - The tester's opinion of the feature
+  - The font used in the report
+  - The time of day it was written
+  explanation: If a developer can't reproduce a bug, they can't fix it. Add the environment and evidence (screenshots or video) too.
+
+- id: software_testing-intermediate-1
+  path: software_testing
+  tier: intermediate
+  topic: Boundary value analysis
+  prompt: An age field accepts 18–60. Using boundary value analysis, which set of test values is best?
+  correct: 17, 18, 60, 61
+  wrong:
+  - 20, 30, 40
+  - 0 and 100
+  - Only 35
+  explanation: Bugs cluster at the edges. Test each boundary and the value just outside it.
+
+- id: software_testing-intermediate-2
+  path: software_testing
+  tier: intermediate
+  topic: Test types
+  prompt: What does regression testing mean?
+  correct: Re-testing existing features to make sure recent changes didn't break them
+  wrong:
+  - Testing only new features
+  - Load and performance testing
+  - Testing done by the customer
+  explanation: Regression suites are the first thing teams automate, because they are run again on every release.
+
+- id: software_testing-advanced-1
+  path: software_testing
+  tier: advanced
+  topic: Automation
+  prompt: A Playwright test passes locally but fails randomly in CI. What is the most likely cause?
+  correct: 'Timing: the test uses fixed waits instead of waiting for the right state'
+  wrong:
+  - Playwright does not support CI
+  - CI computers always fail slow tests
+  - The wrong font is installed
+  explanation: Use web-first assertions and auto-waiting locators (e.g. expect(locator).toBeVisible()) instead of waitForTimeout.
+
+- id: software_testing-advanced-2
+  path: software_testing
+  tier: advanced
+  topic: Triage
+  prompt: Which statement about severity and priority is correct?
+  correct: Severity is how badly the bug affects the system, and priority is how soon it should be fixed
+  wrong:
+  - They mean the same thing
+  - Only customers set severity
+  - Severity only applies to UI bugs
+  explanation: A typo on the home page can be low severity but high priority. A crash in a rarely used admin tool can be the opposite.
+
+- id: cloud_it-basic-1
+  path: cloud_it
+  tier: basic
+  topic: Linux
+  prompt: Which Linux command lists the files in the current folder?
+  correct: ls
+  wrong:
+  - cd
+  - rm
+  - pwd
+  explanation: ls lists files, cd changes folder, pwd prints where you are, and rm deletes, so be careful with rm.
+
+- id: cloud_it-basic-2
+  path: cloud_it
+  tier: basic
+  topic: Networking
+  prompt: What does DNS do?
+  correct: Translates names like google.com into IP addresses
+  wrong:
+  - Encrypts all traffic
+  - Stores your files
+  - Speeds up the CPU
+  explanation: DNS is the internet's phone book. Many "the site is down" problems are really DNS problems.
+
+- id: cloud_it-intermediate-1
+  path: cloud_it
+  tier: intermediate
+  topic: Permissions
+  prompt: What does chmod 644 file.txt allow?
+  correct: The owner can read and write, and everyone else can only read
+  wrong:
+  - Everyone gets full access
+  - Only the owner can run it
+  - It deletes the file
+  explanation: 'Each digit sets permissions for owner, group and others: 6 = read + write, 4 = read.'
+
+- id: cloud_it-intermediate-2
+  path: cloud_it
+  tier: intermediate
+  topic: Cloud models
+  prompt: In cloud computing, what does IaaS give you?
+  correct: Virtual machines, storage and networks that you manage yourself
+  wrong:
+  - Only finished software such as email
+  - Physical servers delivered to your office
+  - Only a domain name
+  explanation: IaaS = infrastructure (you manage the OS), PaaS = a platform to deploy code to, SaaS = ready-made software.
+
+- id: cloud_it-advanced-1
+  path: cloud_it
+  tier: advanced
+  topic: IP addressing
+  prompt: Which IP range is private (not routable on the public internet)?
+  correct: 192.168.0.0/16
+  wrong:
+  - 8.8.8.0/24
+  - 1.1.1.0/24
+  - 142.250.0.0/15
+  explanation: The private ranges are 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16. 8.8.8.8 and 1.1.1.1 are public DNS servers.
+
+- id: cloud_it-advanced-2
+  path: cloud_it
+  tier: advanced
+  topic: Cloud security
+  prompt: What does the "principle of least privilege" mean?
+  correct: Give each user or service only the permissions it actually needs
+  wrong:
+  - Give everyone admin access to save time
+  - Use as few servers as possible
+  - Always pick the cheapest plan
+  explanation: If an account is compromised, least privilege limits the damage. It is one of the most important cloud security habits.
+
+- id: technical_writing-basic-1
+  path: technical_writing
+  tier: basic
+  topic: Audience
+  prompt: What should you work out before writing any documentation?
+  correct: Who the readers are and what they need to get done
+  wrong:
+  - Which font to use
+  - The exact word count
+  - The publishing date
+  explanation: The same feature needs very different docs for a beginner user and an experienced developer.
+
+- id: technical_writing-basic-2
+  path: technical_writing
+  tier: basic
+  topic: Markdown
+  prompt: In Markdown, how do you write a level-2 heading?
+  correct: '## Heading'
+  wrong:
+  - '**Heading**'
+  - <h>Heading
+  - --Heading
+  explanation: 'Each # adds a heading level. **text** makes bold text, not a heading.'
+
+- id: technical_writing-intermediate-1
+  path: technical_writing
+  tier: intermediate
+  topic: Clarity
+  prompt: Which instruction is clearest?
+  correct: Open config.yaml and set port to 8080.
+  wrong:
+  - The configuration file may need to be edited if required.
+  - Configuration should be done.
+  - Edit things as needed.
+  explanation: Good instructions name the exact file, action and value, in the active voice.
+
+- id: technical_writing-intermediate-2
+  path: technical_writing
+  tier: intermediate
+  topic: READMEs
+  prompt: What belongs in a README's "Quick start" section?
+  correct: The fewest steps needed to install and run the project
+  wrong:
+  - The project's full history
+  - Every configuration option
+  - The complete licence text
+  explanation: A quick start gets the reader to a working result quickly. Details belong further down or in reference docs.
+
+- id: technical_writing-advanced-1
+  path: technical_writing
+  tier: advanced
+  topic: Information architecture
+  prompt: How does the Diátaxis framework divide documentation?
+  correct: Into tutorials, how-to guides, reference and explanation
+  wrong:
+  - Into introduction, body and conclusion
+  - Into draft, review and publish
+  - Into frontend, backend and database
+  explanation: Each type serves a different need (learning, doing, looking up, understanding). Mixing them is a common cause of confusing docs.
+
+- id: technical_writing-advanced-2
+  path: technical_writing
+  tier: advanced
+  topic: API documentation
+  prompt: What should every endpoint in API reference docs include?
+  correct: The method and path, parameters, an example request and response, and possible errors
+  wrong:
+  - The developer's name
+  - Only the URL
+  - A marketing paragraph
+  explanation: Developers copy examples first. Showing the errors saves them hours of guessing.
+
+- id: cybersecurity-basic-1
+  path: cybersecurity
+  tier: basic
+  topic: Social engineering
+  prompt: What is phishing?
+  correct: Tricking people into giving away information or clicking malicious links, often with fake messages
+  wrong:
+  - A network speed test
+  - A way of encrypting files
+  - A type of firewall
+  explanation: Most real attacks start with phishing. Check the sender, the link destination and any unusual urgency.
+
+- id: cybersecurity-basic-2
+  path: cybersecurity
+  tier: basic
+  topic: Authentication
+  prompt: What does two-factor authentication (2FA) add?
+  correct: A second proof of identity, such as an app code, on top of your password
+  wrong:
+  - A second copy of the same password
+  - Faster logins
+  - An antivirus scan
+  explanation: Even if a password leaks, an attacker still needs the second factor.
+
+- id: cybersecurity-intermediate-1
+  path: cybersecurity
+  tier: intermediate
+  topic: Encryption
+  prompt: What does HTTPS protect?
+  correct: Data travelling between the browser and the server from being read or changed
+  wrong:
+  - Your computer from all malware
+  - The server from ever being hacked
+  - How strong your password is
+  explanation: HTTPS secures data in transit. It doesn't make a website itself safe or trustworthy.
+
+- id: cybersecurity-intermediate-2
+  path: cybersecurity
+  tier: intermediate
+  topic: Web vulnerabilities
+  prompt: When does SQL injection happen?
+  correct: When user input is put directly into a SQL query, letting attackers change the query
+  wrong:
+  - When the database is too large
+  - When the wrong SQL dialect is used
+  - When the server goes offline
+  explanation: It has been in the OWASP Top 10 for years, and it is entirely preventable.
+
+- id: cybersecurity-advanced-1
+  path: cybersecurity
+  tier: advanced
+  topic: Secure coding
+  prompt: What is the best defence against SQL injection?
+  correct: Parameterised queries (prepared statements)
+  wrong:
+  - Hiding error messages
+  - Using longer table names
+  - Blocking quote characters with browser JavaScript
+  explanation: Parameters keep data separate from SQL code. Browser-side checks are easily bypassed.
+
+- id: cybersecurity-advanced-2
+  path: cybersecurity
+  tier: advanced
+  topic: Ethics
+  prompt: You notice a vulnerability on a real company's website that you were not authorised to test. What is the right thing to do?
+  correct: Stop, don't exploit it further, and report it through their official disclosure or bug bounty channel
+  wrong:
+  - Exploit it to prove it is real
+  - Post it on social media
+  - Sell the details
+  explanation: Testing without permission can be illegal. Responsible disclosure protects both the users and you.
+
+- id: mobile_dev-basic-1
+  path: mobile_dev
+  tier: basic
+  topic: Cross-platform
+  prompt: What is Flutter?
+  correct: A toolkit for building apps for several platforms from one codebase
+  wrong:
+  - A programming language only for iOS
+  - A database
+  - A phone operating system
+  explanation: Flutter (written in Dart) lets one codebase run on Android, iOS, web and desktop.
+
+- id: mobile_dev-basic-2
+  path: mobile_dev
+  tier: basic
+  topic: Android basics
+  prompt: What is an APK file?
+  correct: An installable Android app package
+  wrong:
+  - An iOS design file
+  - A type of image
+  - A web browser plugin
+  explanation: APK (or AAB for the Play Store) is how Android apps are packaged for installation.
+
+- id: mobile_dev-intermediate-1
+  path: mobile_dev
+  tier: intermediate
+  topic: Widgets and state
+  prompt: In Flutter, what is the difference between a StatelessWidget and a StatefulWidget?
+  correct: A StatefulWidget can hold changing data and rebuild itself; a StatelessWidget can't
+  wrong:
+  - StatelessWidgets download faster
+  - StatefulWidgets only work on Android
+  - There is no difference
+  explanation: Use stateful widgets (or a state-management tool) for anything that changes on screen.
+
+- id: mobile_dev-intermediate-2
+  path: mobile_dev
+  tier: intermediate
+  topic: Async code
+  prompt: Why must network calls in a mobile app run asynchronously?
+  correct: So the app's screen doesn't freeze while waiting for the response
+  wrong:
+  - Because phones can't make normal requests
+  - To use less storage
+  - App stores only check it during review
+  explanation: Blocking the main (UI) thread makes apps freeze, and Android may show an "App not responding" error.
+
+- id: mobile_dev-advanced-1
+  path: mobile_dev
+  tier: advanced
+  topic: Architecture
+  prompt: What is the main job of state management (Provider, Riverpod, Redux, ViewModel)?
+  correct: Keep app data in one predictable place so every screen updates consistently
+  wrong:
+  - Compress images
+  - Save battery
+  - Encrypt the app
+  explanation: Clear state management prevents bugs where different screens show different data.
+
+- id: mobile_dev-advanced-2
+  path: mobile_dev
+  tier: advanced
+  topic: Releases
+  prompt: Why release an update to only 10% of users first (a staged rollout)?
+  correct: To catch crashes in a small group before every user is affected
+  wrong:
+  - To make downloads faster
+  - Because stores limit installs
+  - To save server storage
+  explanation: Staged rollouts plus crash reporting let teams pause a bad release early.
+
+- id: ai_ml-basic-1
+  path: ai_ml
+  tier: basic
+  topic: ML basics
+  prompt: What is machine learning?
+  correct: Teaching computers to find patterns in data instead of following only hand-written rules
+  wrong:
+  - A robot that thinks like a human
+  - A faster type of computer chip
+  - Any program that uses the internet
+  explanation: ML models learn patterns from examples. They don't "understand" the way people do.
+
+- id: ai_ml-basic-2
+  path: ai_ml
+  tier: basic
+  topic: Types of learning
+  prompt: Which is an example of supervised learning?
+  correct: Predicting house prices from past sales where the prices are known
+  wrong:
+  - Grouping customers when there are no labels
+  - Writing if/else rules by hand
+  - Sorting files alphabetically
+  explanation: Supervised learning uses labelled examples (inputs plus correct answers) to learn a mapping.
+
+- id: ai_ml-intermediate-1
+  path: ai_ml
+  tier: intermediate
+  topic: Evaluation
+  prompt: Why split data into training and test sets?
+  correct: To check how the model performs on data it hasn't seen
+  wrong:
+  - To make training faster
+  - To double the amount of data
+  - Because models can only read small files
+  explanation: Scoring on training data alone hides whether the model generalises.
+
+- id: ai_ml-intermediate-2
+  path: ai_ml
+  tier: intermediate
+  topic: Overfitting
+  prompt: A model scores 99% on training data but only 60% on new data. What is this called?
+  correct: Overfitting
+  wrong:
+  - Underfitting
+  - Data augmentation
+  - Normalisation
+  explanation: The model memorised the training data. Simpler models, more data or regularisation usually help.
+
+- id: ai_ml-advanced-1
+  path: ai_ml
+  tier: advanced
+  topic: Metrics
+  prompt: In a fraud dataset, 99% of transactions are normal. Why is accuracy a poor metric here?
+  correct: A model that always says "not fraud" gets 99% accuracy but catches no fraud
+  wrong:
+  - Accuracy can't be calculated for fraud
+  - Accuracy only works on images
+  - Fraud data is always wrong
+  explanation: For imbalanced data, look at precision, recall, F1 or PR-AUC instead.
+
+- id: ai_ml-advanced-2
+  path: ai_ml
+  tier: advanced
+  topic: Transfer learning
+  prompt: What does fine-tuning a pre-trained model mean?
+  correct: Continuing to train an existing model on your own smaller dataset for a specific task
+  wrong:
+  - Training a new model from scratch
+  - Changing the model's colour theme
+  - Deleting layers to make it smaller
+  explanation: Fine-tuning reuses what a large model already learned, so it needs far less data and computing power.
+
+- id: graphic_design-basic-1
+  path: graphic_design
+  tier: basic
+  topic: Visual hierarchy
+  prompt: What does "visual hierarchy" mean?
+  correct: Arranging elements so the most important thing is noticed first
+  wrong:
+  - Using as many colours as possible
+  - Putting the logo at the top of every design
+  - Ranking designers by experience
+  explanation: Size, contrast, colour and position guide the eye. Every design needs one clear focal point.
+
+- id: graphic_design-basic-2
+  path: graphic_design
+  tier: basic
+  topic: File formats
+  prompt: Which format is best for a logo that must stay sharp at any size?
+  correct: SVG (vector)
+  wrong:
+  - JPG
+  - GIF
+  - BMP
+  explanation: Vector files are made of shapes rather than pixels, so they scale without getting blurry.
+
+- id: graphic_design-intermediate-1
+  path: graphic_design
+  tier: intermediate
+  topic: Typography
+  prompt: What is kerning?
+  correct: Adjusting the space between two specific letters
+  wrong:
+  - The spacing between lines
+  - How thick the font is
+  - The colour of the text
+  explanation: Good kerning matters most in logos and headlines, where gaps between letters stand out.
+
+- id: graphic_design-intermediate-2
+  path: graphic_design
+  tier: intermediate
+  topic: Print
+  prompt: Which colour mode is usually required for professional printing?
+  correct: CMYK
+  wrong:
+  - RGB
+  - HEX
+  - HSL
+  explanation: Screens mix light (RGB) and printers mix ink (CMYK). Converting late can shift the colours.
+
+- id: graphic_design-advanced-1
+  path: graphic_design
+  tier: advanced
+  topic: Brand guidelines
+  prompt: Why do brand guidelines include a "clear space" rule for the logo?
+  correct: So the logo always has enough empty space around it to stay readable and recognisable
+  wrong:
+  - To save printing ink
+  - To make the logo look smaller
+  - Because of copyright law
+  explanation: Clear space stops other elements crowding the logo, which protects brand recognition.
+
+- id: graphic_design-advanced-2
+  path: graphic_design
+  tier: advanced
+  topic: Resolution
+  prompt: A client sends a 72-dpi web image for a large printed banner. What is the main risk?
+  correct: It will print blurry or pixelated because the resolution is too low
+  wrong:
+  - The colours will be too bright
+  - The file will be too big to email
+  - It will print in black and white
+  explanation: Print usually needs around 300 dpi at the final size. Ask for the original files or a vector version.
+
+- id: content_writing-basic-1
+  path: content_writing
+  tier: basic
+  topic: Calls to action
+  prompt: What is a call to action (CTA)?
+  correct: A line telling the reader what to do next, such as "Sign up free"
+  wrong:
+  - The first sentence of an article
+  - A phone number in the footer
+  - A type of headline font
+  explanation: Every piece of copy should make the next step obvious.
+
+- id: content_writing-basic-2
+  path: content_writing
+  tier: basic
+  topic: Headlines
+  prompt: Which headline is clearest?
+  correct: How to Save 1,000 PKR a Month on Groceries
+  wrong:
+  - 'Groceries: Some Thoughts'
+  - Read This Now!!!
+  - An Article About Money Things
+  explanation: Specific headlines that promise a clear benefit get read. Vague or shouty ones get skipped.
+
+- id: content_writing-intermediate-1
+  path: content_writing
+  tier: intermediate
+  topic: SEO
+  prompt: What is "search intent"?
+  correct: What the person searching actually wants to find or do
+  wrong:
+  - How many times a keyword appears
+  - How fast the page loads
+  - The number of backlinks
+  explanation: Content that matches intent (learn, compare, buy) ranks and converts better than keyword-stuffed text.
+
+- id: content_writing-intermediate-2
+  path: content_writing
+  tier: intermediate
+  topic: Copywriting
+  prompt: What does the AIDA copywriting formula stand for?
+  correct: Attention, Interest, Desire, Action
+  wrong:
+  - Audience, Idea, Draft, Approve
+  - Awareness, Information, Detail, Ask
+  - Ad, Image, Data, Analytics
+  explanation: AIDA is a simple structure for persuasive copy, from the headline to the call to action.
+
+- id: content_writing-advanced-1
+  path: content_writing
+  tier: advanced
+  topic: SEO ethics
+  prompt: A client wants the keyword "best shoes" stuffed 40 times into a 600-word post. What is the best response?
+  correct: Explain that keyword stuffing hurts readability and can hurt rankings, and suggest natural use plus related terms
+  wrong:
+  - Do it exactly as asked
+  - Hide the extra keywords in white text
+  - Refuse and stop replying
+  explanation: Professionals guide clients with reasons. Hidden text and stuffing break search guidelines.
+
+- id: content_writing-advanced-2
+  path: content_writing
+  tier: advanced
+  topic: Originality
+  prompt: Is lightly rewording a competitor's article and delivering it as new work acceptable?
+  correct: 'No: it is still plagiarism and can harm the client and your reputation'
+  wrong:
+  - Yes, if you change every fifth word
+  - Yes, if the article is old
+  - Yes, if you add a new title
+  explanation: Research widely, then write in your own structure and words, with new insights or examples.
+
+- id: ecommerce-basic-1
+  path: ecommerce
+  tier: basic
+  topic: Inventory
+  prompt: What is a product SKU?
+  correct: A unique code for tracking a specific product or variant in inventory
+  wrong:
+  - A shipping company
+  - A discount code
+  - A type of payment
+  explanation: SKUs keep stock, orders and variants (size, colour) from getting mixed up.
+
+- id: ecommerce-basic-2
+  path: ecommerce
+  tier: basic
+  topic: Metrics
+  prompt: What is a store's conversion rate?
+  correct: The percentage of visitors who complete a purchase
+  wrong:
+  - The number of products in the store
+  - The currency exchange rate
+  - How fast pages load
+  explanation: Small conversion improvements often matter more than getting more traffic.
+
+- id: ecommerce-intermediate-1
+  path: ecommerce
+  tier: intermediate
+  topic: Metrics
+  prompt: How is average order value (AOV) calculated?
+  correct: Total revenue ÷ number of orders
+  wrong:
+  - Revenue ÷ visitors
+  - Orders ÷ visitors
+  - Profit ÷ number of products
+  explanation: Bundles, free-shipping thresholds and upsells are common ways to raise AOV.
+
+- id: ecommerce-intermediate-2
+  path: ecommerce
+  tier: intermediate
+  topic: Checkout
+  prompt: Many shoppers add items to their cart but leave at checkout. What is a common first fix?
+  correct: Show shipping costs early and keep checkout short, with a guest checkout option
+  wrong:
+  - Add more pop-ups
+  - Hide the shipping costs until the last step
+  - Require an account before checkout
+  explanation: Unexpected costs and forced sign-ups are among the top reasons people abandon carts.
+
+- id: ecommerce-advanced-1
+  path: ecommerce
+  tier: advanced
+  topic: Unit economics
+  prompt: A product costs 1,000 PKR and sells for 2,500 PKR. Ads cost 900 PKR per sale and fees are 100 PKR. What is the profit per sale?
+  correct: 500 PKR
+  wrong:
+  - 1,500 PKR
+  - 2,500 PKR
+  - 1,400 PKR
+  explanation: 2,500 − 1,000 − 900 − 100 = 500. Revenue is not profit, so always include ad costs and fees.
+
+- id: ecommerce-advanced-2
+  path: ecommerce
+  tier: advanced
+  topic: Customer trust
+  prompt: Your supplier keeps shipping orders weeks late. What is the best response?
+  correct: Show honest delivery times, keep customers informed, and find a more reliable supplier
+  wrong:
+  - Hide the delivery times
+  - Cancel orders without telling customers
+  - Blame the courier publicly
+  explanation: Trust and reviews are a store's most valuable asset. Honesty protects both.
+
+- id: game_dev-basic-1
+  path: game_dev
+  tier: basic
+  topic: Engines
+  prompt: What is a game engine?
+  correct: Software that provides ready-made tools for graphics, physics, input and sound
+  wrong:
+  - A powerful gaming PC
+  - A game controller
+  - An online game store
+  explanation: Engines like Godot and Unity handle the low-level work, so you can focus on gameplay.
+
+- id: game_dev-basic-2
+  path: game_dev
+  tier: basic
+  topic: 2D art
+  prompt: In games, what is a sprite?
+  correct: A 2D image used for a character or object
+  wrong:
+  - A sound effect
+  - A type of game level
+  - A cheat code
+  explanation: Sprites are often packed into sprite sheets for animation.
+
+- id: game_dev-intermediate-1
+  path: game_dev
+  tier: intermediate
+  topic: Game loop
+  prompt: Why multiply movement by delta time (the time since the last frame)?
+  correct: So movement speed stays the same at any frame rate
+  wrong:
+  - To make the game look brighter
+  - To save memory
+  - To make the game load faster
+  explanation: Without delta time, a game runs faster on fast computers and slower on slow ones.
+
+- id: game_dev-intermediate-2
+  path: game_dev
+  tier: intermediate
+  topic: Collisions
+  prompt: What does a collision "hitbox" do?
+  correct: It defines the area used to detect when objects touch
+  wrong:
+  - It stores the player's score
+  - It plays a sound on impact
+  - It draws the character
+  explanation: Hitboxes are usually simpler shapes than the art, which keeps collision checks fast and fair.
+
+- id: game_dev-advanced-1
+  path: game_dev
+  tier: advanced
+  topic: Performance
+  prompt: Hundreds of bullets are created and destroyed every second, causing stutters. What is a common fix?
+  correct: 'Object pooling: reuse a fixed set of bullet objects instead of creating new ones'
+  wrong:
+  - Lower the screen resolution only
+  - Add more bullets
+  - Restart the game every minute
+  explanation: Creating and destroying objects constantly triggers garbage collection pauses. Pooling avoids that.
+
+- id: game_dev-advanced-2
+  path: game_dev
+  tier: advanced
+  topic: Playtesting
+  prompt: Why playtest with people who didn't make the game?
+  correct: They reveal confusing parts the developer can no longer see, because the developer already knows how it works
+  wrong:
+  - It makes the game run faster
+  - It is required to publish a game
+  - Developers can't play their own games
+  explanation: Watch players silently, note where they get stuck, then fix the design rather than explaining it.

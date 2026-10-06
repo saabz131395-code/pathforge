@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Choose your path — PathForge{% endblock %}
+{% block content %}
+<section class="page-hero narrow-hero">
+    <a class="back-link" href="{{ url_for('intake.home') }}">← Start again</a>
+    <span class="eyebrow">{{ paths|length }} GOOD MATCHES</span>
+    <h1>Your answers point in more than one direction.</h1>
+    <p>That is normal. Pick the path whose practice work you would rather build first.</p>
+</section>
+<div class="grid-two">
+    {% for path in paths %}
+    <article class="card decision-card">
+        <div class="path-icon" aria-hidden="true">{{ path.icon }}</div>
+        <span class="eyebrow">{{ path.beginner_focus }}</span>
+        <h2>{{ path.path_name }}</h2>
+        <p>{{ path.description }}</p>
+        <div class="path-practice"><span>You'll practice</span>{{ path.practice_summary }}</div>
+        <a class="button button-primary" href="{{ url_for('paths.assess', path_id=path.id, source='quiz') }}">Choose {{ path.path_name }} →</a>
+    </article>
+    {% endfor %}
+</div>
+{% endblock %}

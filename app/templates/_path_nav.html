@@ -1,0 +1,5 @@
+<nav class="path-subnav" aria-label="{{ path.path_name }} sections">
+    {% for endpoint, label in [('paths.plan', 'My plan'), ('paths.path_detail', 'Overview'), ('paths.resources', 'Learn'), ('paths.projects', 'Practice'), ('paths.progress', 'Progress'), ('paths.proof', 'Prove it')] %}
+    <a href="{{ url_for(endpoint, path_id=path.id, level=level) }}"{% if request.endpoint == endpoint %} aria-current="page"{% endif %}>{{ label }}</a>
+    {% endfor %}
+</nav>

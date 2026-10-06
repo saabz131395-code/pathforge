@@ -1,0 +1,53 @@
+PathForge Attribution License
+
+Copyright (c) 2026 Saba Nawaz. All rights reserved.
+
+This is NOT a free-of-obligation license. You may use, copy, and modify
+this software ONLY under the following conditions.
+
+Permission is granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to
+use, copy, modify, merge, and distribute the Software, including for
+personal, educational, or commercial purposes, SUBJECT TO ALL of the
+following conditions:
+
+1. ATTRIBUTION REQUIRED. Any copy, fork, derivative work, or deployed
+   instance of the Software — public or private — MUST retain visible
+   credit to the original author. At a minimum, every copy must:
+
+   a) Display the credit "Built by Saba Nawaz" visibly in the user
+      interface (e.g. in the site footer) of any running instance.
+   b) Retain the "Credits" entry in the project README naming
+      Saba Nawaz as the original author.
+   c) Retain this LICENSE file and the NOTICE.md file in the root of
+      the project, unmodified in their attribution statements.
+
+2. NO PLAGIARISM. You must NOT present the Software, or any substantial
+   portion of it, as your own original work. Claiming authorship,
+   submitting it as your own project, or removing/obscuring the credits
+   described above is strictly prohibited.
+
+3. DERIVATIVE WORKS. Modified versions must be clearly identified as
+   modified, must not be presented as the original PathForge, and must
+   carry the same attribution conditions (1) and (2).
+
+4. SUBSTANTIAL REUSE. Reusing any substantial part of this codebase in
+   another project still requires visible credit to Saba Nawaz under
+   the same conditions.
+
+5. REDISTRIBUTION OF THIS LICENSE TEXT itself is permitted; altering
+   the copyright or author attribution within it is not.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For permission to use the Software WITHOUT public attribution (e.g.
+closed-source commercial use), contact the author for a separate
+written license.
+
+Contact: Saba Nawaz — GitHub: https://github.com/saabz131395-code

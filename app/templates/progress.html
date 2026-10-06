@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}{{ path.path_name }} progress — PathForge{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('paths.path_detail', path_id=path.id, level=level) }}">← Back to {{ path.path_name }}</a>
+<section class="page-hero">
+    <span class="eyebrow">BUILD · PROGRESS CHECKLIST</span>
+    <h1>Track completed work, not time spent.</h1>
+    <p>Your progress is stored in this browser only. Nothing is uploaded or attached to an account.</p>
+</section>
+{% include '_path_nav.html' %}
+
+<noscript><div class="form-alert card">Progress tracking needs JavaScript to save your checklist in this browser.</div></noscript>
+<div id="storage-warning" class="form-alert card" role="status" hidden>This browser is blocking local storage (for example in private mode), so your progress will not be saved after you close the page.</div>
+
+<section class="progress-summary card">
+    <div><span class="eyebrow">YOUR PROGRESS</span><strong id="progress-count">0 of 0 complete</strong></div>
+    <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+</section>
+
+<div id="progress" class="progress-list">
+    <section class="progress-group">
+        <div class="progress-group-heading"><span>01</span><div><h2>Learn</h2><p>Finish the foundation before calling the skill complete.</p></div></div>
+        {% for key, label in [('resource_started', 'Started a focused learning resource'), ('resource_finished', 'Finished the relevant foundation material')] %}
+        <label class="check-card card"><input type="checkbox" data-key="{{ key }}"><span class="check-box" aria-hidden="true"></span><span><strong>{{ label }}</strong><small>Saved on this device</small></span></label>
+        {% endfor %}
+    </section>
+
+    <section class="progress-group">
+        <div class="progress-group-heading"><span>02</span><div><h2>Build &amp; publish</h2><p>A project only becomes evidence when there is something another person can inspect.</p></div></div>
+        {% for p in projects %}
+        <div class="progress-project">
+            <h3>{{ p.title }} <span class="badge">{{ p.difficulty|upper }}</span></h3>
+            <label class="check-card card"><input type="checkbox" data-key="project_{{ p.slug }}_built"><span class="check-box" aria-hidden="true"></span><span><strong>Project built</strong><small>{{ p.proof_required }}</small></span></label>
+            <label class="check-card card"><input type="checkbox" data-key="project_{{ p.slug }}_published"><span class="check-box" aria-hidden="true"></span><span><strong>Evidence published or saved</strong><small>Keep a link, file, screenshot set, report, or repository.</small></span></label>
+        </div>
+        {% endfor %}
+    </section>
+</div>
+<div class="next-step card">
+    <div><span class="eyebrow">WHEN A PROJECT IS COMPLETE</span><h2>Turn the evidence into a portfolio statement.</h2></div>
+    <a class="button button-primary" href="{{ url_for('paths.proof', path_id=path.id, level=level) }}">Open proof guidance →</a>
+</div>
+<script>window.PATH_KEY = {{ path.path_key|tojson }};</script>
+<script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+<script src="{{ url_for('static', filename='js/progress.js') }}"></script>
+{% endblock %}

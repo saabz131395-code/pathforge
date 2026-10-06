@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block title %}Your {{ path.path_name }} start guide — PathForge{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('intake.home') }}#paths">← All career paths</a>
+
+<section class="result-hero card card-emphasis">
+    <div class="result-main">
+        <div class="hero-path-label"><span class="hero-path-icon" aria-hidden="true">{{ path.icon }}</span><span>{{ path.path_name|upper }} · YOUR START GUIDE</span></div>
+        <h1>{{ level_copy.title }}</h1>
+        <p>{{ level_copy.summary }}</p>
+        <div class="level-switch" aria-label="Switch level">
+            <span>Not quite right?</span>
+            {% for value in ['beginner', 'intermediate', 'advanced'] %}
+            <a href="{{ url_for('paths.plan', path_id=path.id, level=value) }}" class="level-pill{% if value == level %} is-active{% endif %}"{% if value == level %} aria-current="true"{% endif %}>{{ value|title }}</a>
+            {% endfor %}
+            <a href="{{ url_for('paths.assess', path_id=path.id) }}">Retake check</a>
+        </div>
+    </div>
+    {% if score is not none %}
+    <div class="score-ring" style="--pct: {{ (score / total * 100)|round|int }}" role="img" aria-label="You scored {{ score }} out of {{ total }}">
+        <div><strong>{{ score }}<small>/{{ total }}</small></strong><span>correct</span></div>
+    </div>
+    {% endif %}
+</section>
+
+{% include '_path_nav.html' %}
+
+{% if review %}
+<section class="section-block-small">
+    <div class="section-heading compact-heading">
+        <div><span class="eyebrow">REVIEW THESE TOPICS</span><h2>{{ review|length }} thing{{ '' if review|length == 1 else 's' }} worth learning next</h2></div>
+        <p>These are the questions you missed or skipped. Open each one to see the answer. Your guide below covers these gaps.</p>
+    </div>
+    <div class="review-list">
+        {% for q in review %}
+        <details class="review-item card">
+            <summary><span class="tier-badge tier-{{ q.tier }}">{{ q.tier|title }}</span><strong>{{ q.topic }}</strong><span class="review-toggle" aria-hidden="true">Show answer</span></summary>
+            <div class="review-body">
+                <p class="review-q">{{ q.prompt }}</p>
+                <p class="review-a"><span>Answer:</span> {{ q.correct_answer }}</p>
+                <p>{{ q.explanation }}</p>
+            </div>
+        </details>
+        {% endfor %}
+    </div>
+</section>
+{% elif score is not none %}
+<div class="form-alert card success-alert">You answered every question correctly. Your guide jumps straight to advanced work.</div>
+{% endif %}
+
+<section class="section-block">
+    <div class="section-heading compact-heading">
+        <div><span class="eyebrow">YOUR START GUIDE</span><h2>Where, how and what to start with</h2></div>
+        <p>Tick each step as you go. Your ticks are saved in this browser only.</p>
+    </div>
+
+    <div class="timeline guide" id="guide">
+        <article class="timeline-step">
+            <span class="step-number">01</span>
+            <div>
+                <h3>Where to start</h3>
+                {% if first_resource %}
+                <div class="guide-resource">
+                    <span class="badge {{ 'verified' if first_resource.verification_status == 'verified' else 'review' }}">{{ '✓ VERIFIED' if first_resource.verification_status == 'verified' else 'REVIEW PENDING' }}</span>
+                    <h4><a href="{{ first_resource.url }}" target="_blank" rel="noopener noreferrer">{{ first_resource.name }} ↗</a></h4>
+                    <p class="resource-meta">{{ first_resource.source }} · {{ first_resource.type|title }} · ~{{ first_resource.duration_hours_min }}–{{ first_resource.duration_hours_max }} hrs · {{ first_resource.learning_cost|replace('_', ' ')|title }}</p>
+                    <p>{{ first_resource.notes }}</p>
+                </div>
+                {% if backup_resource %}<p class="guide-note">If that one doesn't suit you, try <a href="{{ backup_resource.url }}" target="_blank" rel="noopener noreferrer">{{ backup_resource.name }}</a> instead. Pick one, not both.</p>{% endif %}
+                {% else %}
+                <p>No resource is available at this level yet. <a href="{{ url_for('paths.resources', path_id=path.id) }}">Browse all resources →</a></p>
+                {% endif %}
+                <label class="guide-check"><input type="checkbox" data-key="guide_{{ level }}_where"><span>I've opened it and bookmarked it</span></label>
+            </div>
+        </article>
+
+        <article class="timeline-step">
+            <span class="step-number">02</span>
+            <div>
+                <h3>When: your first session, today</h3>
+                <p>Set aside about 60–90 minutes for this first session:</p>
+                <ol class="guide-list">
+                    <li>Open the resource and finish only the first module or section.</li>
+                    <li>Write down three things you learned and one question you still have.</li>
+                    <li>Choose three or four fixed time slots in your week for this path.</li>
+                </ol>
+                <p class="guide-note">Short, regular sessions work better than one long session at the weekend. PathForge doesn't predict finish dates, because progress depends on practice, not on the calendar.</p>
+                <label class="guide-check"><input type="checkbox" data-key="guide_{{ level }}_first_session"><span>First session done</span></label>
+            </div>
+        </article>
+
+        <article class="timeline-step">
+            <span class="step-number">03</span>
+            <div>
+                <h3>How to study at your level</h3>
+                <ul class="guide-list">
+                    {% for tip in study_method %}<li>{{ tip }}</li>{% endfor %}
+                </ul>
+                <label class="guide-check"><input type="checkbox" data-key="guide_{{ level }}_routine"><span>I have a weekly routine</span></label>
+            </div>
+        </article>
+
+        <article class="timeline-step">
+            <span class="step-number">04</span>
+            <div>
+                <h3>What to build</h3>
+                {% if project %}
+                <div class="guide-resource">
+                    <span class="badge">{{ project.difficulty|upper }}</span>
+                    <h4>{{ project.title }}</h4>
+                    <p class="resource-meta">~{{ project.estimated_effort_hours_min }}–{{ project.estimated_effort_hours_max }} hours of work</p>
+                    <p>{{ project.description }}</p>
+                    <p><strong>Evidence to keep:</strong> {{ project.proof_required }}</p>
+                </div>
+                <p class="guide-note">Start it once you're about halfway through the resource. Building is where most of the learning happens.</p>
+                {% endif %}
+                <label class="guide-check"><input type="checkbox" data-key="guide_{{ level }}_project_started"><span>Project started</span></label>
+            </div>
+        </article>
+
+        <article class="timeline-step">
+            <span class="step-number">05</span>
+            <div>
+                <h3>Prove it</h3>
+                <p>Publish your project (a live link, GitHub repository, portfolio page or report), then mark it built and published in Progress. That unlocks honest CV wording for it.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="{{ url_for('paths.progress', path_id=path.id, level=level) }}">Open progress tracker →</a>
+                    <a class="button button-secondary" href="{{ url_for('paths.resources', path_id=path.id, level=level) }}">All {{ level }} resources</a>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <section class="progress-summary card guide-summary">
+        <div><span class="eyebrow">START GUIDE PROGRESS</span><strong id="guide-count">0 of 0 done</strong></div>
+        <div class="progress-track" aria-hidden="true"><span id="guide-bar"></span></div>
+    </section>
+</section>
+
+<script>window.PATH_KEY = {{ path.path_key|tojson }};</script>
+<script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+<script src="{{ url_for('static', filename='js/guide.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,1377 @@
+# Curated learning resources — the allowlist.
+#
+# Humans decide what goes in this file. Automation (python -m scraper.recheck)
+# only checks that each URL still works.
+#
+# curator_checks — set each one after YOU have personally checked it:
+#   learning_cost     the "learning_cost" value below is correct
+#   certificate_cost  the "certificate_cost" value below is correct
+#   skill             it really teaches the skills of this path
+#   level             the "level" value below is right
+# Values: PASS, FAIL or PENDING.
+#
+# A resource shows as "Verified" only when all four checks are PASS
+# AND the latest URL check passed. Anything else shows as "Review pending".
+#
+# `id` is permanent (URL-check history is kept by id) — never rename it.
+
+resources:
+
+- id: mdn-learn-web-development
+  path: web_dev
+  name: MDN — Learn Web Development
+  url: https://developer.mozilla.org/en-US/docs/Learn_web_development
+  source: MDN
+  type: tutorial
+  level: beginner
+  hours: [10, 20]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Structured beginner-to-comfortable curriculum covering modern front-end fundamentals.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: freecodecamp-responsive-web-design
+  path: web_dev
+  name: freeCodeCamp — Responsive Web Design
+  url: https://www.freecodecamp.org/learn/2022/responsive-web-design/
+  source: freeCodeCamp
+  type: course
+  level: beginner
+  hours: [10, 15]
+  learning_cost: free
+  certificate_cost: free
+  notes: Hands-on HTML/CSS practice with portfolio-style certification projects.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: the-odin-project-full-stack-javascript
+  path: web_dev
+  name: The Odin Project — Full Stack JavaScript
+  url: https://www.theodinproject.com/paths/full-stack-javascript
+  source: The Odin Project
+  type: course
+  level: intermediate
+  hours: [30, 60]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Project-driven JavaScript path for learners ready to go beyond the basics.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: mdn-javascript-guide
+  path: web_dev
+  name: MDN — JavaScript Guide
+  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+  source: MDN
+  type: doc
+  level: beginner
+  hours: [8, 20]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Official-quality JavaScript reference guide, from syntax basics to functions, objects and async code.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: web-dev-learn-css
+  path: web_dev
+  name: web.dev — Learn CSS
+  url: https://web.dev/learn/css
+  source: web.dev (Google)
+  type: course
+  level: beginner
+  hours: [8, 15]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Modules on layout, flexbox, grid, responsive design and other modern CSS fundamentals.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: figma-design-basics
+  path: ui_ux
+  name: Figma — Design Basics
+  url: https://www.figma.com/resource-library/design-basics/
+  source: Figma
+  type: tutorial
+  level: beginner
+  hours: [3, 6]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Introductory design articles covering UI/UX principles, tools, and visual fundamentals.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: nielsen-norman-group-10-usability-heuristics
+  path: ui_ux
+  name: Nielsen Norman Group — 10 Usability Heuristics
+  url: https://www.nngroup.com/articles/ten-usability-heuristics/
+  source: Nielsen Norman Group
+  type: doc
+  level: beginner
+  hours: [1, 2]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: The classic checklist for judging whether an interface is usable — useful for every redesign project.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: laws-of-ux
+  path: ui_ux
+  name: Laws of UX
+  url: https://lawsofux.com/
+  source: Laws of UX
+  type: doc
+  level: beginner
+  hours: [2, 4]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Short illustrated explanations of the psychology principles behind good interface design.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: web-dev-learn-accessibility
+  path: ui_ux
+  name: web.dev — Learn Accessibility
+  url: https://web.dev/learn/accessibility
+  source: web.dev (Google)
+  type: course
+  level: intermediate
+  hours: [6, 12]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Practical accessibility course so designs work for keyboard, screen-reader and low-vision users.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: kaggle-learn-python
+  path: python_data
+  name: Kaggle Learn — Python
+  url: https://www.kaggle.com/learn/python
+  source: Kaggle
+  type: course
+  level: beginner
+  hours: [5, 5]
+  learning_cost: free
+  certificate_cost: free
+  notes: Short hands-on Python course with exercises and a no-cost completion certificate.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: python-official-tutorial
+  path: python_data
+  name: Python — Official Tutorial
+  url: https://docs.python.org/3/tutorial/
+  source: Python Documentation
+  type: doc
+  level: beginner
+  hours: [5, 15]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Official Python tutorial for syntax, data structures, modules, and core language concepts.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: kaggle-learn-pandas
+  path: python_data
+  name: Kaggle Learn — Pandas
+  url: https://www.kaggle.com/learn/pandas
+  source: Kaggle
+  type: course
+  level: intermediate
+  hours: [4, 4]
+  learning_cost: free
+  certificate_cost: free
+  notes: Hands-on data manipulation practice once Python basics are comfortable.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: automate-the-boring-stuff-with-python
+  path: python_data
+  name: Automate the Boring Stuff with Python
+  url: https://automatetheboringstuff.com/
+  source: Al Sweigart
+  type: book
+  level: beginner
+  hours: [15, 30]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Free online book teaching Python through practical automation of files, spreadsheets and web tasks.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: kaggle-learn-data-visualization
+  path: python_data
+  name: Kaggle Learn — Data Visualization
+  url: https://www.kaggle.com/learn/data-visualization
+  source: Kaggle
+  type: course
+  level: intermediate
+  hours: [4, 4]
+  learning_cost: free
+  certificate_cost: free
+  notes: Short hands-on course on making clear charts with Python once pandas basics are comfortable.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: microsoft-learn-understand-data-concepts
+  path: data_analysis
+  name: Microsoft Learn — Understand Data Concepts
+  url: https://learn.microsoft.com/en-us/training/paths/understand-data-concepts/
+  source: Microsoft Learn
+  type: course
+  level: beginner
+  hours: [1, 3]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Beginner learning path covering data concepts, analysis, Excel, and SQL Server context.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: sqlbolt-interactive-sql-lessons
+  path: data_analysis
+  name: SQLBolt — Interactive SQL Lessons
+  url: https://sqlbolt.com/
+  source: SQLBolt
+  type: tutorial
+  level: beginner
+  hours: [3, 6]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Browser-based SQL lessons and exercises with no setup required.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: microsoft-learn-data-analytics
+  path: data_analysis
+  name: Microsoft Learn — Data Analytics
+  url: https://learn.microsoft.com/en-us/training/paths/data-analytics-microsoft/
+  source: Microsoft Learn
+  type: course
+  level: intermediate
+  hours: [1, 3]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: A short introduction to the data analyst role and turning data into reports and dashboards.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: kaggle-learn-intro-to-sql
+  path: data_analysis
+  name: Kaggle Learn — Intro to SQL
+  url: https://www.kaggle.com/learn/intro-to-sql
+  source: Kaggle
+  type: course
+  level: beginner
+  hours: [3, 3]
+  learning_cost: free
+  certificate_cost: free
+  notes: Hands-on SQL exercises on real datasets with a no-cost completion certificate.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: sqlzoo
+  path: data_analysis
+  name: SQLZoo
+  url: https://sqlzoo.net/
+  source: SQLZoo
+  type: tutorial
+  level: beginner
+  hours: [4, 10]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Interactive SQL tutorials and practice questions that run in the browser.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: hubspot-academy-digital-marketing-certification
+  path: digital_marketing
+  name: HubSpot Academy — Digital Marketing Certification
+  url: https://academy.hubspot.com/courses/digital-marketing
+  source: HubSpot Academy
+  type: course
+  level: beginner
+  hours: [4, 6]
+  learning_cost: free
+  certificate_cost: free
+  notes: Free certification course covering SEO, social, email, content, and digital strategy.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: hubspot-academy-digital-advertising
+  path: digital_marketing
+  name: HubSpot Academy — Digital Advertising
+  url: https://academy.hubspot.com/courses/digital-advertising
+  source: HubSpot Academy
+  type: course
+  level: intermediate
+  hours: [3, 6]
+  learning_cost: free
+  certificate_cost: free
+  notes: Free certification course focused on planning and improving digital advertising campaigns.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: google-search-central-seo-starter-guide
+  path: digital_marketing
+  name: Google Search Central — SEO Starter Guide
+  url: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+  source: Google
+  type: doc
+  level: beginner
+  hours: [2, 4]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Google's own explanation of how search works and what helps a site get found.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: hubspot-academy-content-marketing
+  path: digital_marketing
+  name: HubSpot Academy — Content Marketing
+  url: https://academy.hubspot.com/courses/content-marketing
+  source: HubSpot Academy
+  type: course
+  level: beginner
+  hours: [5, 7]
+  learning_cost: free
+  certificate_cost: free
+  notes: Free certification course on planning, creating and repurposing content.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: blackmagic-design-davinci-resolve-training
+  path: content_video
+  name: Blackmagic Design — DaVinci Resolve Training
+  url: https://www.blackmagicdesign.com/products/davinciresolve/training
+  source: Blackmagic Design
+  type: course
+  level: beginner
+  hours: [5, 15]
+  learning_cost: free
+  certificate_cost: free
+  notes: Official training videos, project files, books, and online exams for DaVinci Resolve.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: adobe-learn-video-editing-learning-guide
+  path: content_video
+  name: Adobe Learn — Video Editing Learning Guide
+  url: https://www.adobe.com/learn/premiere-pro/web/create-edit-sequence
+  source: Adobe Learn
+  type: tutorial
+  level: beginner
+  hours: [2, 6]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Free learning materials explaining editing workflow and core video-editing concepts; software access may be paid.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: canva-design-school
+  path: content_video
+  name: Canva Design School
+  url: https://www.canva.com/designschool/
+  source: Canva
+  type: course
+  level: beginner
+  hours: [2, 6]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Short lessons on visual design, thumbnails and social content using a free tool.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: software-testing-help-manual-testing-live-project
+  path: software_testing
+  name: Software Testing Help — Manual Testing Live Project
+  url: https://www.softwaretestinghelp.com/free-online-software-testing-qa-training-course/
+  source: Software Testing Help
+  type: course
+  level: beginner
+  hours: [6, 12]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Beginner-friendly manual testing series covering test scenarios, test cases, execution, bugs, and reporting.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: test-automation-university
+  path: software_testing
+  name: Test Automation University
+  url: https://testautomationu.applitools.com/
+  source: Test Automation University
+  type: course
+  level: intermediate
+  hours: [5, 20]
+  learning_cost: free
+  certificate_cost: free
+  notes: Free testing and automation courses with videos, transcripts, quizzes, badges, and certificates.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: postman-learning-center
+  path: software_testing
+  name: Postman Learning Center
+  url: https://learning.postman.com/docs/introduction/overview/
+  source: Postman
+  type: doc
+  level: beginner
+  hours: [3, 8]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Learn API testing — sending requests, checking responses and writing simple test scripts.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: playwright-getting-started
+  path: software_testing
+  name: Playwright — Getting Started
+  url: https://playwright.dev/docs/intro
+  source: Playwright (Microsoft)
+  type: doc
+  level: intermediate
+  hours: [4, 10]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Official docs for writing your first automated browser tests once manual testing is comfortable.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: ubuntu-linux-command-line-for-beginners
+  path: cloud_it
+  name: Ubuntu — Linux Command Line for Beginners
+  url: https://ubuntu.com/tutorials/command-line-for-beginners
+  source: Ubuntu
+  type: tutorial
+  level: beginner
+  hours: [2, 4]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Beginner command-line tutorial with practical Linux file and shell exercises.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: microsoft-learn-azure-fundamentals-cloud-concepts
+  path: cloud_it
+  name: 'Microsoft Learn — Azure Fundamentals: Cloud Concepts'
+  url: https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/
+  source: Microsoft Learn
+  type: course
+  level: beginner
+  hours: [1, 2]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Beginner path covering cloud concepts, service models, responsibility, and Azure context.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: microsoft-learn-apply-azure-skills-in-guided-projects
+  path: cloud_it
+  name: Microsoft Learn — Apply Azure Skills in Guided Projects
+  url: https://learn.microsoft.com/en-us/training/paths/introduction-cloud-infrastructure-apply-azure-skills-guided-projects/
+  source: Microsoft Learn
+  type: course
+  level: intermediate
+  hours: [5, 8]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Hands-on guided cloud projects intended to turn foundational concepts into practice.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: linux-journey
+  path: cloud_it
+  name: Linux Journey
+  url: https://linuxjourney.com/
+  source: Linux Journey
+  type: tutorial
+  level: beginner
+  hours: [5, 10]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Beginner-friendly lessons on the Linux command line, permissions, processes and networking.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: write-the-docs-software-documentation-guide
+  path: technical_writing
+  name: Write the Docs — Software Documentation Guide
+  url: https://www.writethedocs.org/guide/
+  source: Write the Docs
+  type: doc
+  level: beginner
+  hours: [4, 8]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Community-maintained guide covering documentation principles, tools, markup, and API documentation.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: write-the-docs-beginner-guide-to-software-documentation
+  path: technical_writing
+  name: Write the Docs — Beginner Guide to Software Documentation
+  url: https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/
+  source: Write the Docs
+  type: tutorial
+  level: beginner
+  hours: [2, 4]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Practical guide to structuring useful project documentation and README content.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: google-technical-writing-courses
+  path: technical_writing
+  name: Google — Technical Writing Courses
+  url: https://developers.google.com/tech-writing
+  source: Google
+  type: course
+  level: beginner
+  hours: [4, 8]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Google's free courses for engineers and writers on clear, concise technical writing.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: di-taxis-documentation-framework
+  path: technical_writing
+  name: Diátaxis Documentation Framework
+  url: https://diataxis.fr/
+  source: Diátaxis
+  type: doc
+  level: intermediate
+  hours: [2, 4]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: A widely used way to structure docs into tutorials, how-to guides, reference and explanation.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: portswigger-web-security-academy
+  path: cybersecurity
+  name: PortSwigger — Web Security Academy
+  url: https://portswigger.net/web-security
+  source: PortSwigger
+  type: course
+  level: beginner
+  hours: [10, 30]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Free, continuously updated web-security learning materials and legal interactive labs.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: portswigger-getting-started
+  path: cybersecurity
+  name: PortSwigger — Getting Started
+  url: https://portswigger.net/web-security/getting-started
+  source: PortSwigger
+  type: tutorial
+  level: beginner
+  hours: [2, 5]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Beginner guide explaining how to learn and practice web security safely through the Academy.
+  curator_checks:
+    learning_cost: PASS
+    certificate_cost: PASS
+    skill: PASS
+    level: PASS
+
+- id: owasp-top-10
+  path: cybersecurity
+  name: OWASP Top 10
+  url: https://owasp.org/www-project-top-ten/
+  source: OWASP
+  type: doc
+  level: beginner
+  hours: [2, 5]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: The standard list of the most critical web application security risks.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: overthewire-bandit
+  path: cybersecurity
+  name: OverTheWire — Bandit
+  url: https://overthewire.org/wargames/bandit/
+  source: OverTheWire
+  type: tutorial
+  level: beginner
+  hours: [5, 15]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Legal, beginner-level security wargame that teaches Linux and security basics level by level.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+- id: full-stack-open
+  path: web_dev
+  name: Full Stack Open
+  url: https://fullstackopen.com/en/
+  source: University of Helsinki
+  type: course
+  level: advanced
+  hours: [60, 120]
+  learning_cost: free
+  certificate_cost: free
+  notes: Deep dive into modern web apps — React, Node.js, APIs, testing and deployment.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: material-design-3
+  path: ui_ux
+  name: Material Design 3
+  url: https://m3.material.io/
+  source: Google
+  type: doc
+  level: advanced
+  hours: [6, 15]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: A complete, real-world design system to study tokens, components and accessibility decisions.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: kaggle-learn-intro-to-machine-learning
+  path: python_data
+  name: Kaggle Learn — Intro to Machine Learning
+  url: https://www.kaggle.com/learn/intro-to-machine-learning
+  source: Kaggle
+  type: course
+  level: advanced
+  hours: [3, 5]
+  learning_cost: free
+  certificate_cost: free
+  notes: Build and validate your first models once Python and pandas feel comfortable.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: python-packaging-packaging-projects
+  path: python_data
+  name: Python Packaging — Packaging Projects
+  url: https://packaging.python.org/en/latest/tutorials/packaging-projects/
+  source: Python Packaging Authority
+  type: doc
+  level: advanced
+  hours: [2, 4]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Turn your code into an installable package — a strong signal of professional Python skill.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: kaggle-learn-advanced-sql
+  path: data_analysis
+  name: Kaggle Learn — Advanced SQL
+  url: https://www.kaggle.com/learn/advanced-sql
+  source: Kaggle
+  type: course
+  level: advanced
+  hours: [4, 4]
+  learning_cost: free
+  certificate_cost: free
+  notes: Joins, unions, analytic (window) functions and query efficiency on real datasets.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: google-skillshop
+  path: digital_marketing
+  name: Google Skillshop
+  url: https://skillshop.withgoogle.com/
+  source: Google
+  type: course
+  level: advanced
+  hours: [5, 15]
+  learning_cost: free
+  certificate_cost: free
+  notes: Official Google Analytics and Google Ads training with free certifications.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: adobe-premiere-pro-tutorials
+  path: content_video
+  name: Adobe Premiere Pro — Tutorials
+  url: https://helpx.adobe.com/premiere-pro/tutorials.html
+  source: Adobe
+  type: tutorial
+  level: advanced
+  hours: [5, 15]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Advanced editing techniques — colour, audio clean-up and workflow — from the official docs.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: playwright-best-practices
+  path: software_testing
+  name: Playwright — Best Practices
+  url: https://playwright.dev/docs/best-practices
+  source: Playwright (Microsoft)
+  type: doc
+  level: advanced
+  hours: [2, 4]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: How to write resilient, non-flaky automated tests that hold up in CI.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: owasp-wstg-for-testers
+  path: software_testing
+  name: OWASP Web Security Testing Guide
+  url: https://owasp.org/www-project-web-security-testing-guide/
+  source: OWASP
+  type: doc
+  level: advanced
+  hours: [10, 30]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: The standard guide for security-focused testing — a strong next step for experienced testers.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: kubernetes-tutorials
+  path: cloud_it
+  name: Kubernetes — Tutorials
+  url: https://kubernetes.io/docs/tutorials/
+  source: Kubernetes
+  type: tutorial
+  level: advanced
+  hours: [6, 15]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Official hands-on tutorials for deploying and scaling containerised applications.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: google-developer-documentation-style-guide
+  path: technical_writing
+  name: Google Developer Documentation Style Guide
+  url: https://developers.google.com/style
+  source: Google
+  type: doc
+  level: advanced
+  hours: [4, 8]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: A professional style guide used across Google's developer docs — great for polishing your writing.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: owasp-web-security-testing-guide
+  path: cybersecurity
+  name: OWASP Web Security Testing Guide
+  url: https://owasp.org/www-project-web-security-testing-guide/
+  source: OWASP
+  type: doc
+  level: advanced
+  hours: [10, 30]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: A structured methodology for testing web applications — use only on systems you are authorised to test.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: flutter-get-started
+  path: mobile_dev
+  name: Flutter — Get Started
+  url: https://docs.flutter.dev/get-started
+  source: Flutter (Google)
+  type: doc
+  level: beginner
+  hours: [6, 12]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Official setup guide and first app walkthrough for building Android and iOS apps from one codebase.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: android-basics-with-compose
+  path: mobile_dev
+  name: Android Basics with Compose
+  url: https://developer.android.com/courses/android-basics-compose/course
+  source: Android Developers (Google)
+  type: course
+  level: beginner
+  hours: [20, 40]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: 'Google''s free beginner course: Kotlin and modern Android app building, step by step.'
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: react-native-getting-started
+  path: mobile_dev
+  name: React Native — Getting Started
+  url: https://reactnative.dev/docs/getting-started
+  source: React Native (Meta)
+  type: doc
+  level: intermediate
+  hours: [8, 15]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Build native mobile apps with JavaScript and React — a natural next step for web developers.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: android-guide-to-app-architecture
+  path: mobile_dev
+  name: Android — Guide to App Architecture
+  url: https://developer.android.com/topic/architecture
+  source: Android Developers (Google)
+  type: doc
+  level: advanced
+  hours: [4, 8]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: How professional apps structure data, state and UI layers so they stay maintainable as they grow.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: elements-of-ai
+  path: ai_ml
+  name: Elements of AI
+  url: https://www.elementsofai.com/
+  source: University of Helsinki
+  type: course
+  level: beginner
+  hours: [15, 30]
+  learning_cost: free
+  certificate_cost: free
+  notes: Friendly introduction to what AI is and isn't, with no coding required. Free certificate.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: google-machine-learning-crash-course
+  path: ai_ml
+  name: Google — Machine Learning Crash Course
+  url: https://developers.google.com/machine-learning/crash-course
+  source: Google
+  type: course
+  level: beginner
+  hours: [15, 20]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Core ML concepts with interactive visualisations and exercises.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: kaggle-learn-intro-to-machine-learning-ai-path
+  path: ai_ml
+  name: Kaggle Learn — Intro to Machine Learning (AI path)
+  url: https://www.kaggle.com/learn/intro-to-machine-learning
+  source: Kaggle
+  type: course
+  level: intermediate
+  hours: [3, 5]
+  learning_cost: free
+  certificate_cost: free
+  notes: Train, validate and improve your first models on real data in the browser.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: fast-ai-practical-deep-learning-for-coders
+  path: ai_ml
+  name: fast.ai — Practical Deep Learning for Coders
+  url: https://course.fast.ai/
+  source: fast.ai
+  type: course
+  level: advanced
+  hours: [30, 60]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Hands-on deep learning course — build working models first, theory second.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: hugging-face-learn
+  path: ai_ml
+  name: Hugging Face — Learn
+  url: https://huggingface.co/learn
+  source: Hugging Face
+  type: course
+  level: advanced
+  hours: [10, 30]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Free courses on transformers, LLMs and fine-tuning pre-trained models.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: canva-graphic-design-basics-course
+  path: graphic_design
+  name: Canva Design School — Graphic Design Basics
+  url: https://www.canva.com/designschool/courses/graphic-design-basics-from-the-experts/
+  source: Canva
+  type: course
+  level: beginner
+  hours: [1, 2]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: 12 short lessons on typography, colour, alignment and visual hierarchy — a quick, practical start.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: canva-design-school-graphic-design
+  path: graphic_design
+  name: Canva Design School (Graphic Design)
+  url: https://www.canva.com/designschool/
+  source: Canva
+  type: course
+  level: beginner
+  hours: [2, 6]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Practical lessons on social posts, branding and presentations with a free tool.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: google-fonts-knowledge
+  path: graphic_design
+  name: Google Fonts Knowledge
+  url: https://fonts.google.com/knowledge
+  source: Google Fonts
+  type: doc
+  level: intermediate
+  hours: [3, 8]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: In-depth, well-illustrated guides to choosing and using type well.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: inkscape-learn
+  path: graphic_design
+  name: Inkscape — Learn
+  url: https://inkscape.org/learn/
+  source: Inkscape
+  type: tutorial
+  level: advanced
+  hours: [8, 20]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Tutorials for a free, professional vector editor — logos, icons and print-ready artwork.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: purdue-owl-general-writing
+  path: content_writing
+  name: Purdue OWL — General Writing
+  url: https://owl.purdue.edu/owl/general_writing/index.html
+  source: Purdue University
+  type: doc
+  level: beginner
+  hours: [4, 10]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Clear explanations of grammar, structure and style from a trusted university writing lab.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: hemingway-editor
+  path: content_writing
+  name: Hemingway Editor
+  url: https://hemingwayapp.com/
+  source: Hemingway
+  type: tool
+  level: beginner
+  hours: [1, 2]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Free web editor that highlights long sentences and passive voice so your writing gets clearer.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: google-creating-helpful-people-first-content
+  path: content_writing
+  name: Google — Creating Helpful, People-First Content
+  url: https://developers.google.com/search/docs/fundamentals/creating-helpful-content
+  source: Google
+  type: doc
+  level: intermediate
+  hours: [1, 2]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: What Google looks for in content — essential for SEO writing that actually ranks.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: hubspot-academy-content-marketing-writing-path
+  path: content_writing
+  name: HubSpot Academy — Content Marketing (Writing path)
+  url: https://academy.hubspot.com/courses/content-marketing
+  source: HubSpot Academy
+  type: course
+  level: intermediate
+  hours: [5, 7]
+  learning_cost: free
+  certificate_cost: free
+  notes: Plan, write and repurpose content with a free certification.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: nielsen-norman-group-writing-for-the-web
+  path: content_writing
+  name: Nielsen Norman Group — Writing for the Web
+  url: https://www.nngroup.com/topic/writing-web/
+  source: Nielsen Norman Group
+  type: doc
+  level: advanced
+  hours: [3, 8]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Research-based articles on how people really read online and how to write for them.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: shopify-help-center-intro-to-shopify
+  path: ecommerce
+  name: Shopify Help Center — Intro to Shopify
+  url: https://help.shopify.com/en/manual/intro-to-shopify
+  source: Shopify
+  type: doc
+  level: beginner
+  hours: [3, 6]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Official guide to setting up a store, products, payments and shipping. (Running a live store has costs.)
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: woocommerce-documentation
+  path: ecommerce
+  name: WooCommerce Documentation
+  url: https://woocommerce.com/documentation/
+  source: WooCommerce
+  type: doc
+  level: beginner
+  hours: [4, 8]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Docs for the free WordPress store plugin — useful if clients use WordPress.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: google-merchant-center-help
+  path: ecommerce
+  name: Google Merchant Center Help
+  url: https://support.google.com/merchants
+  source: Google
+  type: doc
+  level: intermediate
+  hours: [3, 6]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: How to list products on Google Shopping and keep product data accurate.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: baymard-institute-e-commerce-ux-articles
+  path: ecommerce
+  name: Baymard Institute — E-commerce UX Articles
+  url: https://baymard.com/blog
+  source: Baymard Institute
+  type: doc
+  level: advanced
+  hours: [4, 10]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Free research articles on checkout, product pages and what makes shoppers abandon carts.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: godot-getting-started
+  path: game_dev
+  name: Godot — Getting Started
+  url: https://docs.godotengine.org/en/stable/getting_started/introduction/index.html
+  source: Godot Engine
+  type: doc
+  level: beginner
+  hours: [6, 15]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Official step-by-step guide to a free, open-source engine, including your first 2D and 3D games.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: unity-learn
+  path: game_dev
+  name: Unity Learn
+  url: https://learn.unity.com/
+  source: Unity
+  type: course
+  level: beginner
+  hours: [10, 30]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Free guided pathways for Unity, one of the most widely used game engines.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: cs50-s-introduction-to-game-development
+  path: game_dev
+  name: CS50's Introduction to Game Development
+  url: https://cs50.harvard.edu/games/
+  source: Harvard University
+  type: course
+  level: intermediate
+  hours: [30, 60]
+  learning_cost: free
+  certificate_cost: paid
+  notes: Lectures and projects recreating classic games (Pong, Mario, Zelda-style) to learn core game programming.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING
+
+- id: game-programming-patterns
+  path: game_dev
+  name: Game Programming Patterns
+  url: https://gameprogrammingpatterns.com/
+  source: Robert Nystrom
+  type: book
+  level: advanced
+  hours: [10, 25]
+  learning_cost: free
+  certificate_cost: not_applicable
+  notes: Free online book on the design patterns professional game code relies on.
+  curator_checks:
+    learning_cost: PENDING
+    certificate_cost: PENDING
+    skill: PENDING
+    level: PENDING

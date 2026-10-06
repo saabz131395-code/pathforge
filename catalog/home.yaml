@@ -1,0 +1,90 @@
+# Content for the home page sections below the career paths.
+# Edit freely: `python seed.py` is not needed, but restart the app to see changes.
+
+tips:
+
+- icon: 🎯
+  title: One course at a time
+  text: Pick one resource and finish it. Jumping between courses feels productive, but it is the most common reason beginners stall.
+
+- icon: 🛠️
+  title: Build early
+  text: Start a small project once you are about a third of the way through a course. You learn far more from getting stuck than from watching.
+
+- icon: 📝
+  title: Write what you learned
+  text: After each session, note three things you learned and one question. Short notes help you remember and show your progress.
+
+- icon: 🗓️
+  title: Fixed slots, not marathons
+  text: Three or four regular sessions a week beat one long weekend session. Consistency matters more than hours.
+
+- icon: 🙋
+  title: Ask good questions
+  text: When you are stuck, write down what you tried, what you expected and what happened. Often you'll solve it while writing, and if not, people can help quickly.
+
+- icon: 🚩
+  title: Avoid "earn in 7 days" offers
+  text: Real skills take practice. Be careful with any course that guarantees income, asks you to pay to "unlock" jobs, or rushes you with countdown timers.
+
+tools:
+
+- name: GitHub
+  url: https://github.com/
+  use: Host your code and show your commit history
+  for: Code, data, testing, docs
+
+- name: GitHub Pages
+  url: https://pages.github.com/
+  use: Publish a portfolio website for free
+  for: Any path
+
+- name: Behance
+  url: https://www.behance.net/
+  use: Show design and creative case studies
+  for: Design, UI/UX, video
+
+- name: Canva
+  url: https://www.canva.com/
+  use: Make portfolio graphics, posts and presentations
+  for: Design, marketing, content
+
+- name: Kaggle
+  url: https://www.kaggle.com/
+  use: Share notebooks and join data competitions
+  for: Python, data, AI
+
+- name: itch.io
+  url: https://itch.io/
+  use: Publish playable games and devlogs
+  for: Game development
+
+- name: Hashnode
+  url: https://hashnode.com/
+  use: Start a free blog for articles and tutorials
+  for: Writing, technical writing
+
+- name: LinkedIn
+  url: https://www.linkedin.com/
+  use: Share finished projects and connect with people in your field
+  for: Any path
+
+freelance_steps:
+
+- title: Build proof first
+  text: Finish 2–3 portfolio projects in one skill before applying for work. Clients hire from evidence, not certificates.
+
+- title: Make a focused profile
+  text: Write one clear headline for one skill (e.g. "Manual & API testing for web apps"), add a real photo, and link your best work.
+
+- title: Start small and specific
+  text: Apply for small, well-defined jobs that match your projects. Read the whole brief before you reply.
+
+- title: Write short, personal proposals
+  text: Show you understood their problem in 2–3 lines, link one relevant sample, and ask one smart question. Skip copy-paste templates.
+
+- title: Agree scope and price in writing
+  text: Confirm deliverables, deadline and revisions before you start. Never pay anyone to "unlock" jobs, and keep payments on the platform.
+
+- title: Deliver, then ask for a review
+  text: Deliver on time, ask for feedback, and add the finished work (with permission) to your portfolio. Reviews compound.

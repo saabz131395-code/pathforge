@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}{{ path.path_name }} proof guidance — PathForge{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('paths.path_detail', path_id=path.id, level=level) }}">← Back to {{ path.path_name }}</a>
+<section class="page-hero">
+    <span class="eyebrow">PROVE · CV &amp; PORTFOLIO EVIDENCE</span>
+    <h1>Describe only what you actually completed.</h1>
+    <p>PathForge unlocks project wording when both “built” and “published” are checked in Progress. It does not manufacture experience.</p>
+</section>
+{% include '_path_nav.html' %}
+
+<div id="cv" class="cv-list section-block-small">
+    {% for p in projects %}
+    <article class="card cv-card" data-project="{{ p.slug }}">
+        <div class="cv-heading">
+            <div><span class="badge">{{ p.difficulty|upper }}</span><h2>{{ p.title }}</h2></div>
+            <span class="cv-status" data-when="unlocked" hidden>READY</span>
+            <span class="cv-status" data-when="locked">LOCKED</span>
+        </div>
+        <div data-when="unlocked" hidden>
+            <div class="cv-line"><span>Suggested starting point — edit it to match exactly what you did</span><p>{{ p.cv_line }}</p></div>
+            <div class="evidence-checklist"><strong>Before using it, confirm your portfolio includes:</strong><ul><li>What you built or tested</li><li>The tools or methods you used</li><li>A concrete output or result</li><li>A working evidence link</li></ul></div>
+        </div>
+        <div class="locked-copy" data-when="locked"><p>Complete both project checkboxes in the Progress screen to unlock this guidance.</p><a href="{{ url_for('paths.progress', path_id=path.id, level=level) }}">Go to progress →</a></div>
+    </article>
+    {% endfor %}
+</div>
+<script>window.PATH_KEY = {{ path.path_key|tojson }};</script>
+<script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+<script src="{{ url_for('static', filename='js/cv.js') }}"></script>
+{% endblock %}

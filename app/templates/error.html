@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }} — PathForge{% endblock %}
+{% block content %}
+<div class="empty-state card error-state">
+    <div class="path-icon" aria-hidden="true">🧭</div>
+    <span class="eyebrow">ERROR {{ code }}</span>
+    <h1>{{ title }}</h1>
+    <p>{{ message }}</p>
+    <a class="button button-primary" href="{{ url_for('intake.home') }}">Back to all paths</a>
+</div>
+{% endblock %}

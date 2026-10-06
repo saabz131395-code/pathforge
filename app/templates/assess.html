@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}{{ path.path_name }} level check — PathForge{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('intake.home') }}#paths">← All career paths</a>
+<section class="page-hero narrow-hero">
+    <div class="hero-path-label"><span class="hero-path-icon" aria-hidden="true">{{ path.icon }}</span><span>{{ path.path_name|upper }} · LEVEL CHECK</span></div>
+    <h1>Let's find your starting point.</h1>
+    <p>{{ questions|length }} short questions, from basic to advanced. It isn't an exam: guessing is fine, and a wrong answer just shows us where your plan should start.</p>
+</section>
+
+<form method="post" class="card assess-form" id="assess-form" novalidate>
+    <div class="assess-progress" aria-hidden="true">
+        <div class="assess-progress-label"><span id="assess-step">Question 1 of {{ questions|length }}</span><span id="assess-tier"></span></div>
+        <div class="progress-track"><span id="assess-bar"></span></div>
+    </div>
+
+    {% for q in questions %}
+    <fieldset class="assess-question" data-tier="{{ q.tier }}">
+        <legend>
+            <span class="assess-number">{{ loop.index }}.</span>
+            <span class="tier-badge tier-{{ q.tier }}">{{ q.tier|title }}</span>
+            <span class="assess-prompt">{{ q.prompt }}</span>
+        </legend>
+        <div class="choice-grid assess-options">
+            {% for option in q.options %}
+            <label class="choice-card">
+                <input type="radio" name="{{ q.slug }}" value="{{ loop.index0 }}">
+                <span class="choice-ui"><span class="option-letter" aria-hidden="true">{{ 'ABCD'[loop.index0] }}</span><span>{{ option }}</span></span>
+            </label>
+            {% endfor %}
+            <label class="choice-card choice-card-wide">
+                <input type="radio" name="{{ q.slug }}" value="skip">
+                <span class="choice-ui choice-ui-muted"><span>I don't know yet</span></span>
+            </label>
+        </div>
+    </fieldset>
+    {% endfor %}
+
+    <div class="assess-nav">
+        <button class="button button-secondary" type="button" id="assess-back" hidden>← Back</button>
+        <button class="button button-primary" type="button" id="assess-next" hidden disabled>Next →</button>
+        <button class="button button-primary" type="submit" id="assess-submit">See my plan →</button>
+    </div>
+</form>
+
+<p class="assess-skip">Completely new to {{ path.path_name }}? <a href="{{ url_for('paths.plan', path_id=path.id, level='beginner') }}">Skip the check and start as a beginner →</a></p>
+
+<script src="{{ url_for('static', filename='js/assess.js') }}"></script>
+{% endblock %}

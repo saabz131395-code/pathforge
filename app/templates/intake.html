@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %}PathForge — Find your career learning path{% endblock %}
+{% block content %}
+<section class="landing-hero">
+    <div class="hero-copy">
+        <span class="eyebrow">FREE CAREER-LAUNCH PATHS</span>
+        <h1>Stop collecting courses.<br><span>Start building proof.</span></h1>
+        <p class="hero-lede">Pick a direction, learn from curated resources, complete practical projects, and leave with evidence you can actually show.</p>
+        <div class="hero-actions">
+            <a class="button button-primary" href="#paths">Choose a path</a>
+            <a class="button button-secondary" href="{{ url_for('intake.quiz') }}">Not sure? Quick match</a>
+        </div>
+        <div class="trust-row" aria-label="Platform principles">
+            <span>✓ Free-to-learn first</span>
+            <span>✓ Verification metadata</span>
+            <span>✓ Portfolio evidence</span>
+        </div>
+    </div>
+    <aside class="hero-proof card card-emphasis" aria-label="How PathForge works">
+        <span class="eyebrow">THE PATHFORGE METHOD</span>
+        <div class="method-step"><span>01</span><div><strong>Learn</strong><p>Use focused, checked resources.</p></div></div>
+        <div class="method-step"><span>02</span><div><strong>Practice</strong><p>Build work that uses the skill.</p></div></div>
+        <div class="method-step"><span>03</span><div><strong>Prove</strong><p>Publish evidence and describe it clearly.</p></div></div>
+        <div class="proof-note">No vague “complete a course” finish line. Every path points toward visible work.</div>
+    </aside>
+</section>
+
+<section id="paths" class="section-block">
+    <div class="section-heading">
+        <div><span class="eyebrow">EXPLORE PATHS</span><h2>{{ paths|length }} realistic starting points</h2></div>
+        <p>Click any path to take a 2-minute level check and get your personal start guide.</p>
+    </div>
+    <div class="path-grid">
+        {% for path in paths %}
+        <a class="path-card card path-card-link" href="{{ url_for('paths.assess', path_id=path.id, source='explicit') }}">
+            <div class="path-icon" aria-hidden="true">{{ path.icon }}</div>
+            <div class="path-card-body">
+                <h3>{{ path.path_name }}</h3>
+                <p>{{ path.beginner_focus }}</p>
+                <div class="path-practice"><span>Practice</span>{{ path.practice_summary }}</div>
+                <span class="path-card-cta">Check my level →</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="not-sure" class="section-block-small">
+    <a class="not-sure-card card" href="{{ url_for('intake.quiz') }}">
+        <span class="path-icon" aria-hidden="true">🧭</span>
+        <span><strong>Not sure which path fits you?</strong><small>Answer 4 quick questions and we'll suggest a match.</small></span>
+        <span class="button button-secondary">Take the quick match →</span>
+    </a>
+</section>
+
+<section id="tips" class="section-block">
+    <div class="section-heading">
+        <div><span class="eyebrow">LEARNING TIPS</span><h2>How to learn online without getting stuck</h2></div>
+        <p>Simple habits that matter more than which course you pick.</p>
+    </div>
+    <div class="tip-grid">
+        {% for tip in home.tips %}
+        <article class="tip-card card">
+            <span class="tip-icon" aria-hidden="true">{{ tip.icon }}</span>
+            <h3>{{ tip.title }}</h3>
+            <p>{{ tip.text }}</p>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="tools" class="section-block">
+    <div class="section-heading">
+        <div><span class="eyebrow">FREE TOOLS</span><h2>Where to publish your proof</h2></div>
+        <p>Free places to show finished work, so anyone can check your skills with one link.</p>
+    </div>
+    <div class="tool-grid">
+        {% for tool in home.tools %}
+        <a class="tool-card card" href="{{ tool.url }}" target="_blank" rel="noopener noreferrer">
+            <strong>{{ tool.name }} <span aria-hidden="true">↗</span></strong>
+            <p>{{ tool.use }}</p>
+            <small>{{ tool['for'] }}</small>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="freelance" class="section-block">
+    <div class="section-heading">
+        <div><span class="eyebrow">FIRST FREELANCE STEPS</span><h2>From proof to your first small client</h2></div>
+        <p>An honest route that works on any marketplace (Fiverr, Upwork, Freelancer.com) or with local clients. No shortcuts, no guarantees.</p>
+    </div>
+    <ol class="freelance-steps">
+        {% for step in home.freelance_steps %}
+        <li class="card"><span class="step-number">{{ '%02d' % loop.index }}</span><div><h3>{{ step.title }}</h3><p>{{ step.text }}</p></div></li>
+        {% endfor %}
+    </ol>
+</section>
+{% endblock %}

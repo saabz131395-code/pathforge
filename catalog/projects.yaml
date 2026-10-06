@@ -1,0 +1,706 @@
+# Portfolio projects. `id` is permanent — saved progress is keyed by it.
+
+projects:
+
+- id: build-a-responsive-personal-portfolio
+  path: web_dev
+  title: Build a Responsive Personal Portfolio
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [10, 15]
+  description: Build and deploy a responsive personal portfolio using semantic HTML and modern CSS.
+  skills_proved: HTML, CSS, responsive design, accessibility
+  proof_required: Live URL + GitHub repository + short README
+  cv_line: Built and deployed a responsive personal portfolio using semantic HTML/CSS and accessible responsive design; live at [link].
+
+- id: build-a-small-interactive-javascript-app
+  path: web_dev
+  title: Build a Small Interactive JavaScript App
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 10]
+  description: Build a small interactive app such as a task tracker, quiz, or form-validation tool.
+  skills_proved: JavaScript, DOM manipulation, validation
+  proof_required: Working public URL + repository
+  cv_line: Built an interactive JavaScript application using DOM manipulation and validation; live at [link].
+
+- id: build-a-public-api-dashboard
+  path: web_dev
+  title: Build a Public API Dashboard
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [12, 20]
+  description: Create a responsive app that fetches a public API and handles loading, error, and empty states.
+  skills_proved: JavaScript, APIs, async requests, UI states
+  proof_required: Working URL + repository + README
+  cv_line: Built and deployed a JavaScript dashboard consuming a public API with resilient loading and error states; [link].
+
+- id: redesign-an-existing-app-flow
+  path: ui_ux
+  title: Redesign an Existing App Flow
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 10]
+  description: Choose one weak user flow and document a clearer redesign with reasons for each change.
+  skills_proved: UX analysis, wireframing, visual hierarchy
+  proof_required: Before/after screens + rationale
+  cv_line: Redesigned a digital product flow and documented usability decisions in a case study; [link].
+
+- id: create-a-small-mobile-ui-kit
+  path: ui_ux
+  title: Create a Small Mobile UI Kit
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 12]
+  description: Design a small mobile interface using consistent typography, spacing, components, and states.
+  skills_proved: Figma, UI design, components, consistency
+  proof_required: Figma link + screenshots + component sheet
+  cv_line: Designed a mobile interface in Figma with reusable components and documented visual-system decisions; [link].
+
+- id: create-a-full-ux-case-study
+  path: ui_ux
+  title: Create a Full UX Case Study
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [15, 25]
+  description: Document problem framing, research notes, wireframes, iterations, and a clickable final prototype.
+  skills_proved: User research, wireframing, prototyping, case-study writing
+  proof_required: Complete case study + prototype
+  cv_line: Created an end-to-end UX case study covering research, iteration, interface design, and a tested prototype; [link].
+
+- id: build-a-file-automation-script
+  path: python_data
+  title: Build a File Automation Script
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [5, 10]
+  description: Automate a repetitive file task such as renaming, sorting, or summarizing files.
+  skills_proved: Python, scripting, file handling
+  proof_required: Repository + README + sample input/output
+  cv_line: Built a Python automation script for [task], including usage instructions and sample output; [link].
+
+- id: clean-and-summarize-a-public-dataset
+  path: python_data
+  title: Clean and Summarize a Public Dataset
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 12]
+  description: Load a public dataset, clean common issues, calculate useful summaries, and explain the process.
+  skills_proved: Python, pandas, data cleaning
+  proof_required: Notebook + dataset source + findings
+  cv_line: Cleaned and summarized a public dataset using Python/pandas and documented the workflow in a notebook; [link].
+
+- id: build-a-reusable-data-utility
+  path: python_data
+  title: Build a Reusable Data Utility
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [12, 20]
+  description: Create a small command-line or notebook utility that transforms data and includes basic validation.
+  skills_proved: Python, functions, validation, packaging basics
+  proof_required: Repository + examples + README
+  cv_line: Built a reusable Python data utility with input validation, examples, and documentation; [link].
+
+- id: create-an-excel-analysis-workbook
+  path: data_analysis
+  title: Create an Excel Analysis Workbook
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 10]
+  description: Take a messy dataset and create a clean analysis workbook with formulas, pivots, and a summary sheet.
+  skills_proved: Excel, cleaning, formulas, pivot tables
+  proof_required: Workbook + source data + one-page findings
+  cv_line: Built an Excel analysis workbook with cleaned data, pivots, and a decision-focused summary; [link].
+
+- id: answer-business-questions-with-sql
+  path: data_analysis
+  title: Answer Business Questions with SQL
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 12]
+  description: Use a sample relational dataset to answer a set of business questions with documented SQL queries.
+  skills_proved: SQL, filtering, joins, aggregation
+  proof_required: SQL file + question list + results screenshots
+  cv_line: Wrote SQL queries using joins and aggregations to answer documented business questions; [link].
+
+- id: build-a-small-insight-dashboard
+  path: data_analysis
+  title: Build a Small Insight Dashboard
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [12, 20]
+  description: Combine a cleaned dataset, key metrics, charts, and a short written interpretation in one dashboard-style artifact.
+  skills_proved: Data cleaning, visualization, analysis, communication
+  proof_required: Dashboard + source + written findings
+  cv_line: Built an analysis dashboard that communicates key metrics, trends, and recommendations from a real dataset; [link].
+
+- id: create-a-mock-campaign-plan
+  path: digital_marketing
+  title: Create a Mock Campaign Plan
+  project_type: outcome_based
+  difficulty: beginner
+  hours: [5, 10]
+  description: Define an objective, audience, channel mix, content plan, and success metrics for a realistic campaign.
+  skills_proved: Campaign planning, audience, content strategy, analytics
+  proof_required: Campaign brief + content calendar
+  cv_line: Created a digital campaign plan with audience, channel strategy, content calendar, and measurable success criteria; [link].
+
+- id: run-a-small-content-experiment
+  path: digital_marketing
+  title: Run a Small Content Experiment
+  project_type: outcome_based
+  difficulty: beginner
+  hours: [10, 15]
+  description: Run a small personal or mock content experiment and record the hypothesis, execution, and metrics.
+  skills_proved: Content planning, analytics, experimentation
+  proof_required: Experiment log + before/after metrics
+  cv_line: Ran a documented content experiment, measured performance, and summarized what changed and what I would test next; [link].
+
+- id: create-a-multi-channel-campaign-report
+  path: digital_marketing
+  title: Create a Multi-Channel Campaign Report
+  project_type: outcome_based
+  difficulty: intermediate
+  hours: [15, 25]
+  description: Plan or simulate a multi-channel campaign and produce a concise performance report with recommendations.
+  skills_proved: Campaign strategy, analytics, reporting
+  proof_required: Strategy + metrics table + final report
+  cv_line: Produced a multi-channel campaign report connecting objectives, channel metrics, findings, and next-step recommendations; [link].
+
+- id: publish-an-edited-short-video
+  path: content_video
+  title: Publish an Edited Short Video
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [5, 10]
+  description: Script, edit, caption, and publish a 30–90 second video using a repeatable workflow.
+  skills_proved: Scripting, editing, captions, pacing
+  proof_required: Published video + short process note
+  cv_line: Produced and published a captioned short-form video using a documented editing workflow; [link].
+
+- id: create-a-three-piece-content-series
+  path: content_video
+  title: Create a Three-Piece Content Series
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 12]
+  description: Plan and produce three related pieces with a consistent audience, message, and visual style.
+  skills_proved: Content planning, storytelling, consistency
+  proof_required: Content plan + three published pieces
+  cv_line: Planned and produced a three-piece content series with consistent messaging and visual direction; [link].
+
+- id: produce-a-technique-focused-video
+  path: content_video
+  title: Produce a Technique-Focused Video
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [12, 20]
+  description: Produce a longer video that intentionally demonstrates pacing, sound design, color, or another editing technique.
+  skills_proved: Video editing, storytelling, production, reflection
+  proof_required: Published video + project notes
+  cv_line: Produced a portfolio video demonstrating [technique] and documented the creative and editing decisions; [link].
+
+- id: write-a-manual-test-pack
+  path: software_testing
+  title: Write a Manual Test Pack
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [5, 10]
+  description: Choose a public website or demo app and create test scenarios, detailed test cases, and expected results.
+  skills_proved: Manual testing, test design, requirements thinking
+  proof_required: Test plan + 15–25 test cases
+  cv_line: Created a manual test pack with structured scenarios, test cases, expected results, and coverage notes for [app]; [link].
+
+- id: create-a-professional-bug-report-set
+  path: software_testing
+  title: Create a Professional Bug Report Set
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [5, 10]
+  description: Test a demo application and document reproducible issues with severity, evidence, and clear steps.
+  skills_proved: Exploratory testing, bug reporting, evidence
+  proof_required: 5+ bug reports + screenshots/video evidence
+  cv_line: Tested [app] and produced reproducible bug reports with severity, evidence, and expected-versus-actual behavior; [link].
+
+- id: build-a-small-regression-checklist
+  path: software_testing
+  title: Build a Small Regression Checklist
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [10, 16]
+  description: Create and execute a repeatable regression checklist for a small web app after a mock release.
+  skills_proved: Regression testing, prioritization, reporting
+  proof_required: Checklist + execution results + summary report
+  cv_line: Designed and executed a regression test checklist, summarized failures, and documented release risk for [app]; [link].
+
+- id: create-a-linux-command-line-lab-log
+  path: cloud_it
+  title: Create a Linux Command-Line Lab Log
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [5, 8]
+  description: Complete practical Linux file, permission, process, and networking commands and explain what each one does.
+  skills_proved: Linux CLI, files, permissions, troubleshooting
+  proof_required: Command log + screenshots + explanations
+  cv_line: Completed and documented a Linux command-line lab covering files, permissions, processes, and basic troubleshooting; [link].
+
+- id: document-a-small-home-network
+  path: cloud_it
+  title: Document a Small Home Network
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [5, 10]
+  description: Map a simple network, identify devices, IP concepts, DNS/DHCP roles, and common troubleshooting checks.
+  skills_proved: Networking fundamentals, documentation, troubleshooting
+  proof_required: Network diagram + troubleshooting checklist
+  cv_line: Created a documented network map and troubleshooting checklist covering IP addressing, DNS, DHCP, and connectivity checks; [link].
+
+- id: complete-and-document-a-cloud-lab
+  path: cloud_it
+  title: Complete and Document a Cloud Lab
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [10, 18]
+  description: Complete a guided cloud project and write a short technical runbook explaining the resources and decisions used.
+  skills_proved: Cloud concepts, deployment, runbooks, cost awareness
+  proof_required: Screenshots + architecture sketch + runbook
+  cv_line: Completed a guided cloud deployment and produced a runbook explaining architecture, configuration, validation, and cleanup; [link].
+
+- id: rewrite-a-poor-readme
+  path: technical_writing
+  title: Rewrite a Poor README
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [4, 8]
+  description: Take an unclear sample project README and rewrite it for a first-time user.
+  skills_proved: Technical writing, structure, Markdown, audience awareness
+  proof_required: Before/after README + rationale
+  cv_line: Rewrote and restructured technical project documentation to improve onboarding, clarity, and task completion; [link].
+
+- id: create-a-step-by-step-user-guide
+  path: technical_writing
+  title: Create a Step-by-Step User Guide
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [5, 10]
+  description: Document a technical task with prerequisites, numbered steps, screenshots, troubleshooting, and a validation step.
+  skills_proved: Procedural writing, screenshots, information architecture
+  proof_required: Published guide + source Markdown
+  cv_line: Created a task-focused technical guide with prerequisites, screenshots, troubleshooting, and validation steps; [link].
+
+- id: document-a-sample-api
+  path: technical_writing
+  title: Document a Sample API
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [10, 18]
+  description: Create concise API documentation for a small public or mock API with authentication, endpoints, examples, and errors.
+  skills_proved: API documentation, examples, Markdown, developer experience
+  proof_required: Docs site/README + request/response examples
+  cv_line: Produced developer-focused API documentation with endpoint references, examples, error guidance, and onboarding instructions; [link].
+
+- id: complete-a-beginner-web-security-lab-set
+  path: cybersecurity
+  title: Complete a Beginner Web Security Lab Set
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 12]
+  description: Complete legal beginner labs and document the vulnerability concept, evidence, and remediation lesson for each one.
+  skills_proved: Web security fundamentals, safe lab practice, reporting
+  proof_required: Lab completion notes + remediation summaries
+  cv_line: Completed legal web-security labs and documented vulnerability behavior, evidence, and remediation lessons; [link].
+
+- id: create-a-security-review-checklist
+  path: cybersecurity
+  title: Create a Security Review Checklist
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [5, 10]
+  description: Review a demo web app against a beginner security checklist without attempting unauthorized access.
+  skills_proved: Security review, threat awareness, documentation
+  proof_required: Checklist + findings + risk notes
+  cv_line: Performed a scoped security review of a demo application and documented findings, risk rationale, and recommended mitigations; [link].
+
+- id: write-a-vulnerability-report-from-a-legal-lab
+  path: cybersecurity
+  title: Write a Vulnerability Report from a Legal Lab
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [10, 18]
+  description: Turn one completed training-lab finding into a professional report with summary, impact, evidence, and remediation.
+  skills_proved: Vulnerability reporting, impact analysis, remediation writing
+  proof_required: Full report + sanitized evidence
+  cv_line: Produced a professional vulnerability report from an authorized training lab, including impact, evidence, reproduction, and remediation; [link].
+- id: build-a-full-stack-app-with-authentication
+  path: web_dev
+  title: Build a Full-Stack App with Authentication
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [30, 50]
+  description: Build and deploy an app with a database, user sign-up/login, protected routes and automated tests.
+  skills_proved: Full-stack development, authentication, databases, testing, deployment
+  proof_required: Live URL + repository + README + test results
+  cv_line: Built and deployed a full-stack application with authentication, a database and automated tests; [link].
+
+- id: build-a-mini-design-system
+  path: ui_ux
+  title: Build a Mini Design System
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [20, 35]
+  description: Define tokens, 8–10 components with states, and usage guidelines, then redesign one product flow using only the system.
+  skills_proved: Design systems, tokens, component design, documentation
+  proof_required: Figma library + documentation page + redesigned flow
+  cv_line: Created a mini design system with tokens, documented components and usage rules, and applied it to a product flow; [link].
+
+- id: build-and-publish-a-tested-python-package
+  path: python_data
+  title: Build and Publish a Tested Python Package
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [20, 35]
+  description: Package a useful utility with tests, type hints, a README and CI, and publish it (TestPyPI is fine).
+  skills_proved: Python packaging, testing, type hints, CI
+  proof_required: Repository + package page + passing CI badge
+  cv_line: Built and published a tested Python package with CI and documentation; [link].
+
+- id: end-to-end-analysis-with-advanced-sql
+  path: data_analysis
+  title: End-to-End Analysis with Advanced SQL
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [20, 30]
+  description: Answer a real business question with window functions and CTEs, then present findings and limitations in a short report.
+  skills_proved: Advanced SQL, window functions, analysis, communication
+  proof_required: SQL file + dashboard or report + written limitations
+  cv_line: Answered a business question end to end using advanced SQL (CTEs, window functions) and presented findings with limitations; [link].
+
+- id: run-a-tracked-funnel-experiment
+  path: digital_marketing
+  title: Run a Tracked Funnel Experiment
+  project_type: outcome_based
+  difficulty: advanced
+  hours: [20, 30]
+  description: Set up analytics tracking for a small landing page, run an A/B test on one step of the funnel and report the result honestly.
+  skills_proved: Analytics setup, funnel analysis, A/B testing, reporting
+  proof_required: Tracking plan + experiment log + results report
+  cv_line: Set up analytics for a landing-page funnel, ran an A/B test and reported measured results and next steps; [link].
+
+- id: produce-a-mini-documentary
+  path: content_video
+  title: Produce a Mini Documentary
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [25, 40]
+  description: Research, script, film and edit a 5–10 minute documentary with interviews, B-roll, clean audio and colour correction.
+  skills_proved: Research, scripting, interviewing, editing, colour and audio
+  proof_required: Published video + script + production notes
+  cv_line: Researched, scripted, filmed and edited a short documentary with interviews, colour correction and clean audio; [link].
+
+- id: build-a-playwright-automation-framework-with-ci
+  path: software_testing
+  title: Build a Playwright Automation Framework with CI
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [20, 35]
+  description: Automate a demo app with Playwright using page objects, test data, reporting and a CI pipeline that runs on every push.
+  skills_proved: Test automation, Playwright, page object model, CI/CD
+  proof_required: Repository + CI run link + HTML test report
+  cv_line: Built a Playwright automation framework with page objects, reporting and a CI pipeline for [app]; [link].
+
+- id: deploy-a-containerised-app-with-runbook
+  path: cloud_it
+  title: Deploy a Containerised App with Runbook
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [20, 35]
+  description: Containerise a small app with Docker, deploy it to a free cloud tier and write a runbook covering monitoring, rollback and cleanup.
+  skills_proved: Docker, cloud deployment, monitoring, documentation
+  proof_required: Repository + architecture diagram + runbook
+  cv_line: Containerised and deployed an application to the cloud with a runbook covering monitoring, rollback and cleanup; [link].
+
+- id: create-a-docs-site-with-di-taxis-structure
+  path: technical_writing
+  title: Create a Docs Site with Diátaxis Structure
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [20, 30]
+  description: Build a small documentation site for an open-source tool with a tutorial, how-to guides, reference and explanation pages.
+  skills_proved: Information architecture, docs-as-code, technical writing
+  proof_required: Published docs site + source repository
+  cv_line: Created a documentation site organised with the Diátaxis framework (tutorial, how-to, reference, explanation); [link].
+
+- id: write-a-threat-model-for-a-demo-app
+  path: cybersecurity
+  title: Write a Threat Model for a Demo App
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [15, 25]
+  description: Threat-model an intentionally vulnerable demo app (e.g. OWASP Juice Shop run locally) using STRIDE, and recommend prioritised mitigations.
+  skills_proved: Threat modelling, STRIDE, risk prioritisation, reporting
+  proof_required: Data-flow diagram + threat table + mitigation report
+  cv_line: Produced a STRIDE threat model for a demo web application with a data-flow diagram and prioritised mitigations; [link].
+
+- id: build-a-to-do-app-with-local-storage
+  path: mobile_dev
+  title: Build a To-Do App with Local Storage
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 12]
+  description: Build a task app where items can be added, completed and deleted, and are saved on the device.
+  skills_proved: Mobile UI, state, local storage
+  proof_required: Repository + screen recording + APK or web build
+  cv_line: Built a mobile to-do app with persistent local storage and a clean, responsive UI; [link].
+
+- id: build-a-unit-converter-app
+  path: mobile_dev
+  title: Build a Unit Converter App
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [5, 10]
+  description: Build a small converter (currency, length or weight) with input validation and a polished layout.
+  skills_proved: Mobile layouts, input handling, validation
+  proof_required: Repository + screenshots
+  cv_line: Built a unit converter app with input validation and a responsive mobile layout; [link].
+
+- id: build-a-weather-app-using-a-public-api
+  path: mobile_dev
+  title: Build a Weather App Using a Public API
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [12, 20]
+  description: Fetch live data from a public weather API and handle loading, error and offline states.
+  skills_proved: APIs, async code, error handling, state management
+  proof_required: Repository + demo video + README
+  cv_line: Built a weather app consuming a public API with loading, error and offline handling; [link].
+
+- id: release-an-app-with-login-and-cloud-sync
+  path: mobile_dev
+  title: Release an App with Login and Cloud Sync
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [30, 50]
+  description: Build an app with user accounts and cloud-synced data, write tests, and publish it to a closed testing track.
+  skills_proved: Authentication, cloud data, testing, release process
+  proof_required: Repository + test results + store testing link
+  cv_line: Built and released an app with authentication, cloud sync and automated tests to a store testing track; [link].
+
+- id: build-an-image-classifier-with-teachable-machine
+  path: ai_ml
+  title: Build an Image Classifier with Teachable Machine
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [3, 6]
+  description: Train a no-code image classifier, test it on new images, and write up where it works and where it fails.
+  skills_proved: ML concepts, training data, evaluation
+  proof_required: Live model link + short write-up with examples
+  cv_line: Trained and evaluated an image classifier and documented its accuracy and failure cases; [link].
+
+- id: train-your-first-model-on-a-public-dataset
+  path: ai_ml
+  title: Train Your First Model on a Public Dataset
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 12]
+  description: Clean a public dataset, train a simple model with scikit-learn, and explain the result in plain words.
+  skills_proved: Python, scikit-learn, data cleaning
+  proof_required: Notebook + dataset source + findings
+  cv_line: Cleaned a public dataset and trained a baseline machine-learning model with documented results; [link].
+
+- id: build-and-evaluate-a-prediction-model
+  path: ai_ml
+  title: Build and Evaluate a Prediction Model
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [15, 25]
+  description: Compare several models with proper train/test splits and metrics, and justify the one you choose.
+  skills_proved: Model selection, metrics, validation, communication
+  proof_required: Notebook + comparison table + README
+  cv_line: Built and compared prediction models using proper validation and metrics, and justified the final choice; [link].
+
+- id: fine-tune-a-pre-trained-model-and-write-a-model-card
+  path: ai_ml
+  title: Fine-Tune a Pre-trained Model and Write a Model Card
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [25, 40]
+  description: Fine-tune a small pre-trained model for a specific task, deploy a demo, and document data, limits and risks in a model card.
+  skills_proved: Transfer learning, deployment, responsible AI
+  proof_required: Demo link + repository + model card
+  cv_line: Fine-tuned a pre-trained model, deployed a demo, and documented limitations in a model card; [link].
+
+- id: design-a-set-of-5-social-media-posts
+  path: graphic_design
+  title: Design a Set of 5 Social Media Posts
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [4, 8]
+  description: Design five consistent posts for a real or fictional brand, using one colour palette and type system.
+  skills_proved: Layout, typography, consistency
+  proof_required: Exported posts + short design notes
+  cv_line: Designed a consistent set of social media posts with a defined colour palette and type system; [link].
+
+- id: create-an-event-poster-with-clear-hierarchy
+  path: graphic_design
+  title: Create an Event Poster with Clear Hierarchy
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [3, 6]
+  description: Design a poster where the most important information is readable from a distance.
+  skills_proved: Visual hierarchy, composition, typography
+  proof_required: Poster file + before/after drafts
+  cv_line: Designed an event poster focused on clear visual hierarchy and readability; [link].
+
+- id: design-a-brand-identity-kit
+  path: graphic_design
+  title: Design a Brand Identity Kit
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [12, 20]
+  description: Create a logo, colour palette, type pairing and usage examples for a small business.
+  skills_proved: Branding, logo design, colour, typography
+  proof_required: Brand board PDF + logo files (SVG/PNG)
+  cv_line: Created a brand identity kit including logo, colour palette, typography and usage examples; [link].
+
+- id: complete-a-rebrand-case-study
+  path: graphic_design
+  title: Complete a Rebrand Case Study
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [20, 35]
+  description: Redesign the visual identity of a local business (with permission) or a fictional one, and document research, options and final guidelines.
+  skills_proved: Brand strategy, design systems, presentation
+  proof_required: Case study + brand guidelines PDF
+  cv_line: Completed a rebrand case study covering research, design exploration and final brand guidelines; [link].
+
+- id: write-and-publish-3-blog-posts
+  path: content_writing
+  title: Write and Publish 3 Blog Posts
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 10]
+  description: Choose one topic area and publish three well-structured posts with clear headings and sources.
+  skills_proved: Writing, structure, editing
+  proof_required: Three published links
+  cv_line: Wrote and published three structured blog posts on [topic]; [link].
+
+- id: rewrite-a-weak-product-page
+  path: content_writing
+  title: Rewrite a Weak Product Page
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [3, 6]
+  description: Rewrite a confusing product or service page so benefits are clear and the call to action is obvious.
+  skills_proved: Copywriting, benefits vs features, CTAs
+  proof_required: Before/after copy + rationale
+  cv_line: Rewrote product page copy to clarify benefits and strengthen the call to action; [link].
+
+- id: write-an-seo-article-from-brief-to-publish
+  path: content_writing
+  title: Write an SEO Article from Brief to Publish
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [8, 14]
+  description: Research search intent, write a brief and outline, then write and publish an article that answers it fully.
+  skills_proved: SEO research, search intent, long-form writing
+  proof_required: Brief + published article + keyword notes
+  cv_line: Researched search intent and wrote an SEO article from brief to publication; [link].
+
+- id: run-a-one-month-content-calendar
+  path: content_writing
+  title: Run a One-Month Content Calendar
+  project_type: outcome_based
+  difficulty: advanced
+  hours: [20, 30]
+  description: Plan and publish a month of content for a blog or page, track results, and report what worked.
+  skills_proved: Content strategy, consistency, analytics
+  proof_required: Calendar + published pieces + results report
+  cv_line: Planned and delivered a one-month content calendar and reported measured results; [link].
+
+- id: set-up-a-demo-store-with-10-products
+  path: ecommerce
+  title: Set Up a Demo Store with 10 Products
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 10]
+  description: Use a free trial or a local WooCommerce install to build a demo store with collections, policies and test checkout.
+  skills_proved: Store setup, product catalogue, policies
+  proof_required: Store screenshots or demo link + setup notes
+  cv_line: Set up a demo online store with organised collections, policies and a working test checkout; [link].
+
+- id: write-and-photograph-5-product-listings
+  path: ecommerce
+  title: Write and Photograph 5 Product Listings
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [4, 8]
+  description: Create five listings with clear titles, honest descriptions, specs and clean photos.
+  skills_proved: Product copy, photography basics, SEO titles
+  proof_required: Listings document + photos
+  cv_line: Created optimised product listings with clear titles, honest descriptions and product photography; [link].
+
+- id: audit-and-improve-a-store-s-checkout
+  path: ecommerce
+  title: Audit and Improve a Store's Checkout
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [10, 16]
+  description: Review a demo store's product pages and checkout against usability guidelines and implement improvements.
+  skills_proved: E-commerce UX, conversion optimisation
+  proof_required: Audit report + before/after screenshots
+  cv_line: Audited and improved an online store's product pages and checkout using e-commerce UX guidelines; [link].
+
+- id: run-a-small-store-experiment-with-analytics
+  path: ecommerce
+  title: Run a Small Store Experiment with Analytics
+  project_type: outcome_based
+  difficulty: advanced
+  hours: [20, 30]
+  description: Set up analytics, change one thing (price display, shipping message, product photos) and measure the effect honestly.
+  skills_proved: Analytics, experimentation, reporting
+  proof_required: Tracking setup + experiment log + results
+  cv_line: Ran a measured store experiment with analytics and reported results and next steps; [link].
+
+- id: build-a-pong-or-breakout-clone
+  path: game_dev
+  title: Build a Pong or Breakout Clone
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [5, 10]
+  description: Recreate a classic game with scoring, collisions and a restart screen.
+  skills_proved: Game loop, input, collisions
+  proof_required: Playable build + repository
+  cv_line: Built a playable Breakout-style game with scoring, collisions and game states; [link].
+
+- id: make-a-one-screen-platformer-level
+  path: game_dev
+  title: Make a One-Screen Platformer Level
+  project_type: artifact_based
+  difficulty: beginner
+  hours: [6, 12]
+  description: Build a small platformer level with jumping, a hazard, a collectible and a goal.
+  skills_proved: Movement, physics, level design
+  proof_required: Playable build + short video
+  cv_line: Built a platformer level with player movement, hazards, collectibles and a goal; [link].
+
+- id: ship-a-complete-small-game-on-itch-io
+  path: game_dev
+  title: Ship a Complete Small Game on itch.io
+  project_type: artifact_based
+  difficulty: intermediate
+  hours: [20, 35]
+  description: Finish a small game with a menu, sound, a win/lose state and a public itch.io page.
+  skills_proved: Game design, polish, publishing
+  proof_required: itch.io page + repository + devlog
+  cv_line: Designed, finished and published a complete small game on itch.io; [link].
+
+- id: build-a-polished-game-and-run-playtests
+  path: game_dev
+  title: Build a Polished Game and Run Playtests
+  project_type: artifact_based
+  difficulty: advanced
+  hours: [35, 60]
+  description: Build a game with a save system and juice (effects, feedback), run playtests with 5+ people, and iterate on the results.
+  skills_proved: Systems design, save systems, playtesting, iteration
+  proof_required: Playable build + playtest report + changelog
+  cv_line: Built a polished game with a save system and improved it through structured playtesting; [link].

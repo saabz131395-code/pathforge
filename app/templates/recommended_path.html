@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}{{ path.path_name }} path — PathForge{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('intake.home') }}#paths">← All career paths</a>
+<section class="path-hero">
+    <div class="path-hero-copy">
+        <div class="hero-path-label"><span class="hero-path-icon" aria-hidden="true">{{ path.icon }}</span><span>{{ path.path_name|upper }}</span></div>
+        <h1>{{ path.tagline }}</h1>
+        <p>{{ path.description }}</p>
+        <div class="recommendation-note">
+            <span class="note-icon" aria-hidden="true">↳</span>
+            <div><strong>Is this path for you?</strong><p>{{ path.why_recommended }}</p></div>
+        </div>
+        <div class="hero-actions">
+            {% if level %}
+            <a class="button button-primary" href="{{ url_for('paths.plan', path_id=path.id, level=level) }}">Open my start guide →</a>
+            <a class="button button-secondary" href="{{ url_for('paths.assess', path_id=path.id) }}">Retake level check</a>
+            {% else %}
+            <a class="button button-primary" href="{{ url_for('paths.assess', path_id=path.id) }}">Check my level (2 min) →</a>
+            <a class="button button-secondary" href="{{ url_for('paths.plan', path_id=path.id, level='beginner') }}">I'm completely new — skip</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="path-focus-card card">
+        <span class="eyebrow">BEGINNER FOCUS</span>
+        <strong>{{ path.beginner_focus }}</strong>
+        <span class="eyebrow gap-top">PRACTICE</span>
+        <strong>{{ path.practice_summary }}</strong>
+    </div>
+</section>
+
+{% include '_path_nav.html' %}
+
+<section class="stat-grid section-block-small">
+    <a class="stat-card card" href="{{ url_for('paths.resources', path_id=path.id, level=level) }}">
+        <span class="stat-kicker">LEARN</span><strong>{{ resource_count }} resources</strong><p>{{ verified_count }} fully verified · the rest are awaiting review</p><span class="arrow">→</span>
+    </a>
+    <a class="stat-card card" href="{{ url_for('paths.projects', path_id=path.id, level=level) }}">
+        <span class="stat-kicker">PRACTICE</span><strong>{{ project_count }} projects</strong><p>Beginner work plus an intermediate challenge</p><span class="arrow">→</span>
+    </a>
+    <a class="stat-card card" href="{{ url_for('paths.proof', path_id=path.id, level=level) }}">
+        <span class="stat-kicker">PROVE</span><strong>CV-ready evidence</strong><p>Only surface guidance after projects are completed</p><span class="arrow">→</span>
+    </a>
+</section>
+
+<section class="section-block">
+    <div class="section-heading compact-heading">
+        <div><span class="eyebrow">YOUR LEARNING PATH</span><h2>Four steps, one clear outcome</h2></div>
+        <p>Don't try to consume everything. Move forward when you can demonstrate the skill.</p>
+    </div>
+    <div class="timeline">
+        <article class="timeline-step"><span class="step-number">01</span><div><h3>Learn the foundations</h3><p>Choose one beginner resource (verified ones are listed first) and work through the relevant fundamentals.</p><a href="{{ url_for('paths.resources', path_id=path.id, level=level) }}">Open learning resources →</a></div></article>
+        <article class="timeline-step"><span class="step-number">02</span><div><h3>Practice deliberately</h3><p>Apply the skill in a small project where the output can be inspected—not just described.</p><a href="{{ url_for('paths.projects', path_id=path.id, level=level) }}">See practice projects →</a></div></article>
+        <article class="timeline-step"><span class="step-number">03</span><div><h3>Build and publish</h3><p>Finish the artifact, report, lab, or experiment and save the evidence somewhere shareable.</p><a href="{{ url_for('paths.progress', path_id=path.id, level=level) }}">Track what is complete →</a></div></article>
+        <article class="timeline-step"><span class="step-number">04</span><div><h3>Prove the work</h3><p>Turn completed work into a concise CV or portfolio statement backed by a real evidence link.</p><a href="{{ url_for('paths.proof', path_id=path.id, level=level) }}">Open proof guidance →</a></div></article>
+    </div>
+</section>
+{% endblock %}

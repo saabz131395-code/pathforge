@@ -1,0 +1,148 @@
+# Career paths, shown in this order.
+# `key` is permanent (used in URLs, quiz scoring and saved progress) — never rename it.
+
+paths:
+
+- key: web_dev
+  name: Web Development
+  icon: 🌐
+  tagline: Build skills. Build proof.
+  description: Learn HTML, CSS, and JavaScript by building and publishing real web projects.
+  beginner_focus: HTML, CSS, JavaScript
+  practice_summary: Websites + JavaScript apps
+  why_recommended: You want to make webpages and applications work correctly and demonstrate the result with live projects.
+
+- key: ui_ux
+  name: UI/UX Design
+  icon: 🎨
+  tagline: Design with evidence, not guesswork.
+  description: Learn interface design, UX fundamentals, prototyping, and case-study thinking with accessible tools.
+  beginner_focus: Figma, UX basics
+  practice_summary: App redesigns + case studies
+  why_recommended: You are interested in making digital products look, feel, and work better for people.
+
+- key: python_data
+  name: Python / Data
+  icon: 🐍
+  tagline: Turn code and data into useful tools.
+  description: Learn Python fundamentals, data handling, automation, and notebook-based analysis.
+  beginner_focus: Python, data handling
+  practice_summary: Scripts + notebooks
+  why_recommended: You enjoy solving practical problems with code and turning information into useful results.
+
+- key: data_analysis
+  name: Data Analysis
+  icon: 📊
+  tagline: Ask better questions. Show the evidence.
+  description: Learn spreadsheet analysis, SQL, data cleaning, and dashboard-style communication.
+  beginner_focus: Excel, SQL, Python
+  practice_summary: Dashboards + analysis
+  why_recommended: You like finding patterns, answering business questions, and explaining what the data means.
+
+- key: digital_marketing
+  name: Digital Marketing
+  icon: 📣
+  tagline: Plan, publish, measure, improve.
+  description: Learn SEO, content strategy, campaign planning, and analytics through small measurable experiments.
+  beginner_focus: SEO, content, analytics
+  practice_summary: Campaign experiments
+  why_recommended: You are interested in getting the right people to notice something and measuring what happens next.
+
+- key: content_video
+  name: Content / Video
+  icon: 🎬
+  tagline: Tell clearer stories and publish the work.
+  description: Learn editing, storytelling, content planning, and repeatable production workflows.
+  beginner_focus: Editing, storytelling
+  practice_summary: Videos + content portfolio
+  why_recommended: You enjoy making videos or content people can watch, read, share, and react to.
+
+- key: software_testing
+  name: Software Testing
+  icon: 🧪
+  tagline: Find problems. Document them clearly.
+  description: Learn manual testing, test-case design, bug reporting, and the basics of repeatable test workflows.
+  beginner_focus: Manual testing, test cases
+  practice_summary: Test reports + bug reports
+  why_recommended: You notice edge cases, like checking how things behave, and enjoy documenting problems precisely.
+
+- key: cloud_it
+  name: Cloud / IT Basics
+  icon: ☁️
+  tagline: Understand the systems behind the screen.
+  description: Learn Linux, networking, cloud fundamentals, troubleshooting, and simple infrastructure concepts.
+  beginner_focus: Linux, networking, cloud fundamentals
+  practice_summary: Labs + documentation
+  why_recommended: You are curious about operating systems, networks, cloud services, and how technical systems fit together.
+
+- key: technical_writing
+  name: Technical Writing
+  icon: ✍️
+  tagline: Make complex things easier to use.
+  description: Learn documentation structure, Markdown, audience-focused writing, and API-style explanation.
+  beginner_focus: Documentation, Markdown
+  practice_summary: Guides + API documentation
+  why_recommended: You enjoy explaining technical ideas clearly and turning confusing processes into useful instructions.
+
+- key: cybersecurity
+  name: Cybersecurity Basics
+  icon: 🔐
+  tagline: Learn safely. Practice legally. Document clearly.
+  description: Learn security fundamentals, common web risks, defensive thinking, and beginner-friendly legal labs.
+  beginner_focus: Security fundamentals
+  practice_summary: Beginner labs + reports
+  why_recommended: You are interested in understanding how systems fail, how risks are reduced, and how findings are communicated responsibly.
+
+- key: mobile_dev
+  name: Mobile App Development
+  icon: 📱
+  tagline: Build apps people carry everywhere.
+  description: Learn to build Android and iOS apps with Flutter or React Native, from first screen to store release.
+  beginner_focus: Flutter, Android basics
+  practice_summary: Mobile apps + store-ready builds
+  why_recommended: You want to build apps people use on their phones every day and see your work running in your pocket.
+
+- key: ai_ml
+  name: AI / Machine Learning
+  icon: 🤖
+  tagline: Teach computers to learn from data.
+  description: Learn machine-learning fundamentals, train and evaluate models, and build small AI-powered tools responsibly.
+  beginner_focus: ML concepts, Python models
+  practice_summary: Trained models + AI mini-apps
+  why_recommended: You are curious how AI works and want to build things that predict, classify or generate, not just use AI tools.
+
+- key: graphic_design
+  name: Graphic Design
+  icon: 🖌️
+  tagline: Make ideas look clear and memorable.
+  description: Learn layout, typography, colour and branding, and design posts, posters and brand kits with free tools.
+  beginner_focus: Canva, typography, layout
+  practice_summary: Social posts + brand identity kits
+  why_recommended: You enjoy visual work and want to design graphics, posters and brands that grab attention.
+
+- key: content_writing
+  name: Content Writing / Copywriting
+  icon: ✒️
+  tagline: Words that people read and act on.
+  description: Learn to write clear blog posts, SEO articles and persuasive copy for websites, products and ads.
+  beginner_focus: Blogging, SEO writing
+  practice_summary: Published articles + copy samples
+  why_recommended: You like writing and want to turn it into articles, product pages and copy that businesses need.
+
+- key: ecommerce
+  name: E-commerce Store Management
+  icon: 🛒
+  tagline: Run an online store that customers trust.
+  description: 'Learn to set up and run an online store: products, listings, checkout, payments, analytics and customer service.'
+  beginner_focus: Shopify/WooCommerce basics
+  practice_summary: Demo stores + listing optimisation
+  why_recommended: You are interested in online selling and want to learn how real stores attract, convert and keep customers.
+
+- key: game_dev
+  name: Game Development
+  icon: 🎮
+  tagline: Make games, then make them fun.
+  description: Learn a game engine, game logic, art and sound basics, and ship small playable games online.
+  beginner_focus: Godot or Unity basics
+  practice_summary: Playable games on itch.io
+  why_recommended: You love games and want to build your own worlds, mechanics and playable projects.

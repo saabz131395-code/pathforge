@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Quick match — PathForge{% endblock %}
+{% block content %}
+<section class="page-hero narrow-hero">
+    <a class="back-link" href="{{ url_for('intake.home') }}#paths">← Back to paths</a>
+    <span class="eyebrow">QUICK MATCH · {{ questions|length }} QUESTIONS</span>
+    <h1>Which kind of work sounds more satisfying?</h1>
+    <p>There are no right answers. This only gives you a practical starting point — you can switch paths any time.</p>
+</section>
+
+{% if missing %}
+<div class="form-alert card" role="alert">Please answer every question so the match is meaningful.</div>
+{% endif %}
+
+<form method="post" class="finder-form card quiz-form-wide">
+    {% for question in questions %}
+    <fieldset>
+        <legend>{{ loop.index }}. {{ question.prompt }}</legend>
+        <div class="choice-grid">
+            {% for option in question.options %}
+            <label class="choice-card">
+                <input type="radio" name="{{ question.id }}" value="{{ option.id }}" required>
+                <span class="choice-ui"><span><strong>{{ option.label }}</strong></span></span>
+            </label>
+            {% endfor %}
+        </div>
+    </fieldset>
+    {% endfor %}
+    <div class="form-footer">
+        <p>Your answers are not stored anywhere.</p>
+        <button class="button button-primary" type="submit">Show my match <span aria-hidden="true">→</span></button>
+    </div>
+</form>
+{% endblock %}

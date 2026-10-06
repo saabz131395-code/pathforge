@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}{{ path.path_name }} projects — PathForge{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('paths.path_detail', path_id=path.id, level=level) }}">← Back to {{ path.path_name }}</a>
+<section class="page-hero">
+    <span class="eyebrow">PRACTICE · PORTFOLIO PROJECTS</span>
+    <h1>Build evidence, not unsupported claims.</h1>
+    <p>Each project tells you what to make, what skill it demonstrates, and what proof to keep.</p>
+</section>
+{% include '_path_nav.html' %}
+
+<div class="project-grid section-block-small">
+    {% for p in projects %}
+    <article class="project-card card">
+        <div class="project-topline"><span class="badge">{{ p.difficulty|upper }}</span><span>~{{ p.estimated_effort_hours_min }}–{{ p.estimated_effort_hours_max }} hrs</span></div>
+        <h2>{{ p.title }}</h2>
+        <p>{{ p.description }}</p>
+        <div class="project-detail"><span>Skills this proves</span><strong>{{ p.skills_proved }}</strong></div>
+        <div class="project-detail"><span>Evidence to keep</span><strong>{{ p.proof_required }}</strong></div>
+        <details class="cv-preview"><summary>Preview CV line</summary><p>{{ p.cv_line }}</p></details>
+    </article>
+    {% endfor %}
+</div>
+<div class="next-step card"><div><span class="eyebrow">NEXT STEP</span><h2>Choose one project and finish it.</h2><p>Progress works better when the checklist is tied to real evidence.</p></div><a class="button button-primary" href="{{ url_for('paths.progress', path_id=path.id, level=level) }}">Open progress tracker →</a></div>
+{% endblock %}

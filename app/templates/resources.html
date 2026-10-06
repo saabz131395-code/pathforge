@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}{{ path.path_name }} resources — PathForge{% endblock %}
+{% block content %}
+<a class="back-link" href="{{ url_for('paths.path_detail', path_id=path.id, level=level) }}">← Back to {{ path.path_name }}</a>
+<section class="page-hero resource-hero">
+    <span class="eyebrow">LEARN · CURATED RESOURCES</span>
+    <h1>Learn from a smaller, clearer list.</h1>
+    <p>Every resource shows exactly which checks it has passed. “Verified” means a curator confirmed the cost, level and skill fit <em>and</em> the link was recently checked — nothing is marked verified automatically.</p>
+</section>
+{% include '_path_nav.html' %}
+
+<form class="card filters" method="get">
+    <div>
+        <label for="level">Level</label>
+        <select id="level" name="level">
+            <option value="">All levels</option>
+            {% for value in ['beginner', 'intermediate', 'advanced'] %}<option value="{{ value }}" {% if level == value %}selected{% endif %}>{{ value|title }}</option>{% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="type">Resource type</label>
+        <select id="type" name="type">
+            <option value="">All types</option>
+            {% for t in resource_types %}<option value="{{ t }}" {% if request.args.get('type') == t %}selected{% endif %}>{{ t|title }}</option>{% endfor %}
+        </select>
+    </div>
+    <label class="filter-check"><input type="checkbox" name="verified_only" value="1" {% if request.args.get('verified_only') == '1' %}checked{% endif %}><span>Verified only</span></label>
+    <label class="filter-check"><input type="checkbox" name="free_cert_only" value="1" {% if request.args.get('free_cert_only') == '1' %}checked{% endif %}><span>Free certificate</span></label>
+    <button class="button button-primary" type="submit">Apply filters</button>
+</form>
+
+{% if resources %}
+<p class="result-count">{{ resources|length }} resource{{ '' if resources|length == 1 else 's' }}</p>
+<div class="resource-list">
+    {% for r in resources %}
+    {% set verified = r.verification_status == 'verified' %}
+    <article class="resource-card card">
+        <div class="resource-main">
+            <div class="resource-topline">
+                <span class="badge {{ 'verified' if verified else 'review' }}">{{ '✓ VERIFIED' if verified else 'REVIEW PENDING' }}</span>
+                <span class="resource-source">{{ r.source }}</span>
+            </div>
+            <h2><a href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.name }} <span aria-hidden="true">↗</span></a></h2>
+            <p class="resource-meta">{{ r.level|title }} · {{ r.type|title }} · ~{{ r.duration_hours_min }}–{{ r.duration_hours_max }} hrs</p>
+            {% if r.notes %}<p>{{ r.notes }}</p>{% endif %}
+            <ul class="verification-grid" aria-label="Verification checks">
+                {% for value, label in [(r.learning_cost_check, 'Cost confirmed'), (r.level_check, 'Level confirmed'), (r.skill_check, 'Skill fit confirmed'), (r.url_check, 'Link working')] %}
+                <li class="verification-item {{ 'pass' if value == 'PASS' else 'pending' }}">{{ '✓' if value == 'PASS' else '○' }} {{ label }}{% if value != 'PASS' %} <span class="sr-note">(pending)</span>{% endif %}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <aside class="trust-panel">
+            <span class="eyebrow">TRUST RECORD</span>
+            <div><small>Learning cost</small><strong>{{ r.learning_cost|replace('_', ' ')|title }}</strong></div>
+            <div><small>Certificate</small><strong>{{ r.certificate_cost|replace('_', ' ')|title }}</strong></div>
+            <div><small>Link last checked</small><strong>{{ r.last_checked|friendly_date }}</strong></div>
+            <details>
+                <summary>{{ 'Why verified?' if verified else 'Why pending?' }}</summary>
+                {% if verified %}
+                <p>A curator confirmed the cost, certificate, level and skill fit, and the link passed an automated check on {{ r.last_checked|friendly_date }}. Next review due {{ r.next_review_due|friendly_date }}.</p>
+                {% else %}
+                {% if r.url_check == 'BLOCKED' %}
+                <p>This site blocks automated link checks, so a person needs to confirm the link by hand. The resource may still be useful — just confirm the cost yourself before relying on it.</p>
+                {% else %}
+                <p>At least one check (marked ○) has not been completed yet. The resource may still be useful — just confirm the cost yourself before relying on it.</p>
+                {% endif %}
+                {% endif %}
+            </details>
+        </aside>
+    </article>
+    {% endfor %}
+</div>
+{% else %}
+<div class="empty-state card"><div class="path-icon">🔎</div><h2>No resources match those filters.</h2><p>Remove a filter or switch level to see the rest of the curated list.</p></div>
+{% endif %}
+{% endblock %}
