@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use or build on PathForge, please cite it as below."
+type: software
+title: "PathForge: Learn → Build → Prove"
+abstract: >-
+  An open-source Flask platform that assesses a learner's level with short
+  knowledge checks and generates personalised, evidence-based start guides
+  across 16 career paths, using curated free resources with an inspectable
+  verification record.
+authors:
+  - family-names: Nawaz
+    given-names: Saba
+repository-code: "https://github.com/saabz131395-code/pathforge"
+url: "https://saba1313.pythonanywhere.com"
+license-url: "https://github.com/saabz131395-code/pathforge/blob/main/LICENSE"
+keywords:
+  - education
+  - career guidance
+  - learning paths
+  - adaptive assessment
+  - flask
+  - python

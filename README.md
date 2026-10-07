@@ -2,6 +2,8 @@
 
 [![tests](https://github.com/saabz131395-code/pathforge/actions/workflows/tests.yml/badge.svg)](https://github.com/saabz131395-code/pathforge/actions/workflows/tests.yml)
 
+**🌐 Live demo: [saba1313.pythonanywhere.com](https://saba1313.pythonanywhere.com)**
+
 PathForge helps learners stop collecting courses and start building proof. A learner picks a career direction (or takes a short quiz), takes a 6-question level check, and gets a personalised start guide: where to start, how to study at their level, what to build, and how to prove it. CV wording unlocks only after the work is actually done.
 
 **Built with:** Python · Flask · Jinja2 · SQLite · vanilla JavaScript · PyYAML · pytest · GitHub Actions
